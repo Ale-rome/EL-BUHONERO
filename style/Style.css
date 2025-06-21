@@ -88,11 +88,10 @@ main{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows:0.5fr 0.5fr 1fr 3.5fr  1fr;
   grid-template-areas: ". titulo titulo  ."
- ". . . ."
-
-                  "parrafo parrafo parrafo parrafo" 
-                  ". s1 s1 ."             
-                  "s2 s2 s2 s2";
+                       ". . . ."
+                       "parrafo parrafo parrafo parrafo" 
+                       ". s1 s1 ."             
+                       "s2 s2 s2 s2";
  }
  .titulo{
   grid-area: titulo;
