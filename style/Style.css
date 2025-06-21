@@ -32,7 +32,7 @@ header{
 .logo_nav{
   display: flex;
   justify-content: space-evenly;
-  padding:10px;
+  padding: 10px;
   position: absolute;
   top: 0px; 
   left: 20px; 
@@ -57,7 +57,7 @@ header{
 nav ul li{
   display: inline-block;
  
-  }
+ }
 .nav_princ, .nav1, .nav2{
   padding: 2px 6px;
   background-color: cornsilk;
@@ -68,7 +68,7 @@ nav ul li{
   font-weight: bold;
   font-style: italic;
   color: rgb(53, 26, 26);
-  
+ 
 }  
 
 /* imagen de fondo del main*/
@@ -86,7 +86,7 @@ main{
   width: 100vw;
   font-style: italic;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows:0.5fr 0.5fr 1fr 3.5fr  1fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr 3.5fr 1fr;
   grid-template-areas: ". titulo titulo  ."
                        ". . . ."
                        "parrafo parrafo parrafo parrafo" 
@@ -97,7 +97,6 @@ main{
   grid-area: titulo;
   color: rgb(122, 37, 40);
   text-shadow: 5px 5px 2px rgb(238, 224, 224);
-  text-decoration-skip-ink: ;
   text-align: center;
   position: relative;
   top: 20px;
