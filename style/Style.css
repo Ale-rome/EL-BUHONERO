@@ -1,176 +1,199 @@
-/* sacaremos los parámetros prefijados*/
 *{
-    padding: 0;
     margin: 0;
-    box-sizing:border-box;
+    padding: 0;
+    box-sizing: content-box;
 }
-body{
-    background-color:#e0dfdb;
-}
-/* esto sera un collage para el banner */
-header.principal{
-    width: 100vw;
-    height: 40vh;
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    color: whitesmoke;
-    font-size: 1.5rem;
-   
- 
-   
 
+/* comenzaremos con la version movil de nuestra aplicacion */
+body{
+  height: 100vh;
+}
+
+/* header del banner principal*/
+header{
+   height: 15vh;
+   max-width: 100%;
+   
+     
+ }
+ /* el banner estara formado por imagenes formadas horizontalmente */
+.img_banner{ 
+   position: relative; 
+   height: 15vh;
+   width: 100%;
+   display:flex; 
+   z-index: 0;
 
 } 
-section.banner{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 200px;
-    gap: 1px;
-    height: 100%;
-}
-
-.banner img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/* el texto y el logo iran encima del collage */
-
-
-section.texto_logo{   
-   
-    top: auto;
-    display: flex;
-    position: absolute; 
-    top:10px;
-    padding: 20px 30px;
-    align-content: center;
-    justify-content: center;
-   
-
-
+.hfmg{
+  width: 25%;
+} 
+/* el logo y los enlaces se ubicaran por encima de las imagenes */
+.logo_nav{
+  display: flex;
+  justify-content: space-evenly;
+  padding:10px;
+  position: absolute;
+  top: 0px; 
+  left: 20px; 
+  z-index: 2;
+  gap: 100px;
 }
 
 .logo{
-    width: 60%;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 5px 5px 10px rgb(162, 149, 149) ;
-    border-radius: 100%;
   
-    
-}
-
-.p_1 {   
-    margin-bottom: 10px;
-    margin-left: 10px;
-    text-shadow: 2px 3px 0.9px rgb(66, 52, 52) ;      
+  height: 12vh;
+  width: auto;
+  background-color: rgb(251, 246, 246);
+  border-radius: 100%;
+  box-shadow: 10px 4px 5px rgb(168, 163, 163);
    
-}
-
-/* main de la pagina principal */
-
-.main_principal{
-    margin-top: 10px;
-    text-align: center;
-    color: rgb(33, 59, 34);
-}
-.main_principal h1{
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic; 
-    text-shadow: 8px 6px 0.9px rgb(168, 150, 150);
-   font-size: 3rem;
-   margin-bottom: 10px;
-
-}
-.main_principal h2{
-    font-size: 1.5
-    ;
-    margin-bottom: 20px;
-}
-.main_principal p{
-    font-style: italic;
 } 
 
-.nav_inferior{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 30px;
+.nav_header{
+  align-items: flex-end; 
+  gap: 20px;
 }
-.img_nav{
-    margin-top: 20px;
-    width: 100px;
-    height: 100px;
-    border-radius: 10%;
-}
-.cont{
-    display: flex;
-    flex-direction: row;
+nav ul li{
+  display: inline-block;
+ 
+  }
+.nav_princ, .nav1, .nav2{
+  padding: 2px 6px;
+  background-color: cornsilk;
+  border-radius: 16px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(53, 26, 26);
+  
+}  
+
+/* imagen de fondo del main*/
+main{
+  display: grid;
+  align-items: center;
+  text-align: center;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  background-image: url(../imagenes/libros-blancos.jpg); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75vh; 
+  width: 100vw;
+  font-style: italic;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows:0.5fr 0.5fr 1fr 3.5fr  1fr;
+  grid-template-areas: ". titulo titulo  ."
+ ". . . ."
+
+                  "parrafo parrafo parrafo parrafo" 
+                  ". s1 s1 ."             
+                  "s2 s2 s2 s2";
+ }
+ .titulo{
+  grid-area: titulo;
+  color: rgb(122, 37, 40);
+  text-shadow: 5px 5px 2px rgb(238, 224, 224);
+  text-decoration-skip-ink: ;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  }
+
+ .descripcion{
+  grid-area: parrafo;
+  color: rgb(75, 37, 10);
+ }
+
+ .frase1{
+  grid-area: s1;
+  background-color: rgb(168, 181, 181, 0.5);
+  font-size: 1.2rem;  
+  text-shadow: 2px 2px 2px rgb(97, 89, 89);
+  font-weight: bold;
+  color: rgb(69, 37, 37);
+ }
+.frase2{
+  grid-area: s2;
+ }
+
+footer{
+  display: flex;  
+  justify-content: space-evenly;
+  height: 10vh;
+  background-color: rgb(56, 43, 34);
+  }
+    
+  
+.img_foot{
+ height: 5vh;
+ margin-top: 2vh;
+ border: 1px solid rgb(77, 62, 62);
+ border-radius: 100%;
+ box-shadow: 3px 4px 3px rgb(235, 172, 13);
+ 
+
 }
 
-.img_cont{
-    margin-top: 50px;
-    width: 50px;
-    height: 50px;
-    border-radius: 10%;
-   
-}
-.cont1{
-    align-items: center;
-}
-.body_catalogo{
-
-    background-image: url(../imagenes/regalo-libros.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.cat_h1{
-   margin-top: 50vh;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   font-style: italic;
-   text-align: center;
-   
-   font-size: 3rem;
-   color: rgb(53, 21, 21);
-    text-shadow: 4px 4px 0.9px rgb(168, 150, 150);
-}
+/* pagina catalogo */
 
 .header_cat{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-   
+  display: flex;
+  margin-top: 2px;
+  align-content: center;
+  background-color: rgb(94, 59, 59);
+  height: 8vh;
+  width: 100vw;
+  gap: 30px;
+  
 }
 
 .nav{
-  margin-right: 30px;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 20px;
   
- }
-
-.nav1, .nav2{
-    background-color: rgb(147, 94, 101);
-    color: antiquewhite;
-    padding: 10px 40px;
-    border-radius: 20px;
-    text-decoration: none;
-
-    }
-   
-.img_rec{
-    width: 10vw;
-    height: auto;
-    box-shadow: 5px 5px 10px rgb(162, 149, 149) ;
-    border-radius: 100%;
-    margin-left: 20%;
-
 }
 
-.rec_body{
-    background-color: rgb(209, 198, 182);
+.main_cat{
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  align-content: center;
+  text-align: center;
+  background-image: url(/imagenes/regalo-libros.jpg); 
+  background-size: cover;
+  
+ }
+.cat_h1{
+  color: rgb(49, 31, 31);
+  background-color: rgba(71, 33, 33, 0.21);
+  text-shadow: 3px 2px 2px rgb(236, 233, 223);
+  font-style: italic;
+ padding-left: 20px;
+ padding-right: 20px;
+  text-align: center;
+}
+
+
+/* barra de navegación con menu hamburguesa bootstraps */
+
+.header_cat{
+  margin-top: 0vh;
+  margin-bottom: 2px;
+  align-items: center;
+  height: 8vh;
+  max-width: 100%;
+   
+}
+.nav1, .nav2{
+  width: 50px;
+  text-align: center;
+}
+
+.foot_cat{
+  margin-top: 2px;
+  background-color: rgb(96, 58, 58)
 }
