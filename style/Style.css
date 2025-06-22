@@ -1,34 +1,38 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
 }
 
 /* comenzaremos con la version movil de nuestra aplicacion */
 body{
-  height: 100vh;
+ height: 100vh;
+ width: 100vw;;
 }
 
 /* header del banner principal*/
 header{
-   height: 15vh;
-   max-width: 100%;
-   
+  height: 16vh;
      
  }
- /* el banner estara formado por imagenes formadas horizontalmente */
+
+/* el banner estara formado por imagenes ubicadas horizontalmente y debajo del logo
+y barra de navegacion */
+
 .img_banner{ 
-   position: relative; 
-   height: 15vh;
-   width: 100%;
-   display:flex; 
-   z-index: 0;
+  display:flex; 
+  position: relative; 
+  height: 16vh;
+  width: 100vw;  
+  z-index: 0;
 
 } 
 .hfmg{
-  width: 25%;
+  width: 25vw;
 } 
+
 /* el logo y los enlaces se ubicaran por encima de las imagenes */
+
 .logo_nav{
   display: flex;
   justify-content: space-evenly;
@@ -37,52 +41,59 @@ header{
   top: 0px; 
   left: 20px; 
   z-index: 2;
-  gap: 100px;
+  gap: 20vw;
 }
 
 .logo{
-  
   height: 12vh;
   width: auto;
-  background-color: rgb(251, 246, 246);
+  background-color: rgba(46, 24, 24, 0.08);
   border-radius: 100%;
-  box-shadow: 10px 4px 5px rgb(168, 163, 163);
+  border-style: outset;
+  box-shadow: 10px 4px 8px rgb(77, 72, 72);
+
    
 } 
 
-.nav_header{
-  align-items: flex-end; 
-  gap: 20px;
-}
+ 
 nav ul li{
-  display: inline-block;
- 
+  display: inline-block;  
  }
-.nav_princ, .nav1, .nav2{
-  padding: 2px 6px;
-  background-color: cornsilk;
-  border-radius: 16px;
+
+.nav_princ, .nav_cat, .nav_rec{
   text-decoration: none;
-  list-style: none;
+  list-style: none; 
+  width: 100%;
+  height: 100%;
+  padding: 4px 4px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border-style: outset;
   font-size: 0.8rem;
-  font-weight: bold;
   font-style: italic;
-  color: rgb(53, 26, 26);
- 
+  background-color: rgb(233, 237, 241);
+  color: rgb(21, 50, 31);
+  letter-spacing: 1px;  
+  font-weight: bold;
 }  
 
+.nav_header{
+ margin-top: 8vh;
+  
+}
+
 /* imagen de fondo del main*/
-main{
+.main_index{
   display: grid;
   align-items: center;
   text-align: center;
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   background-image: url(../imagenes/libros-blancos.jpg); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 75vh; 
+  height: 70vh; 
   width: 100vw;
   font-style: italic;
   grid-template-columns: repeat(4, 1fr);
@@ -95,7 +106,7 @@ main{
  }
  .titulo{
   grid-area: titulo;
-  color: rgb(122, 37, 40);
+  color: rgb(48, 67, 49);
   text-shadow: 5px 5px 2px rgb(238, 224, 224);
   text-align: center;
   position: relative;
@@ -109,14 +120,19 @@ main{
 
  .frase1{
   grid-area: s1;
-  background-color: rgb(168, 181, 181, 0.5);
+  background-color: rgba(184, 197, 197, 0.299);
   font-size: 1.2rem;  
   text-shadow: 2px 2px 2px rgb(97, 89, 89);
   font-weight: bold;
-  color: rgb(69, 37, 37);
- }
+  color: rgb(26, 45, 34);
+  letter-spacing: 1.5px;
+  word-spacing: 3px;
+  line-height: 1.3;
+   }
+
 .frase2{
   grid-area: s2;
+  color: rgb(43, 43, 72);
  }
 
 footer{
@@ -134,64 +150,125 @@ footer{
  border-radius: 100%;
  box-shadow: 3px 4px 3px rgb(235, 172, 13);
  
-
 }
 
 /* pagina catalogo */
 
-.header_cat{
-  display: flex;
-  margin-top: 2px;
-  align-content: center;
-  background-color: rgb(94, 59, 59);
-  height: 8vh;
+/* header con barra de navegacion y bootstrap */
+
+.header_cat, .header_rec{
+  display: flex;  
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url(../imagenes/oscuro_sombra.jpg);
+  background-size: cover;
+  background-position: center;
   width: 100vw;
-  gap: 30px;
   
 }
 
-.nav{
-  gap: 20px;
-  
+.nav_cat{
+padding: 4px 8px;
+margin-right: 10px; 
 }
 
+.navcat{
+margin-top: 4vh;
+}
 .main_cat{
   display: flex;
   width: 100vw;
-  height: 80vh;
+  height: 72vh;
   align-content: center;
   text-align: center;
-  background-image: url(/imagenes/regalo-libros.jpg); 
+  background-image: url(/imagenes/hojas_dobladas.jpg); 
   background-size: cover;
   
  }
 .cat_h1{
-  color: rgb(49, 31, 31);
-  background-color: rgba(71, 33, 33, 0.21);
+  color: rgb(26, 20, 65);
   text-shadow: 3px 2px 2px rgb(236, 233, 223);
   font-style: italic;
- padding-left: 20px;
- padding-right: 20px;
-  text-align: center;
-}
-
-
-/* barra de navegación con menu hamburguesa bootstraps */
-
-.header_cat{
-  margin-top: 0vh;
-  margin-bottom: 2px;
-  align-items: center;
-  height: 8vh;
-  max-width: 100%;
-   
-}
-.nav1, .nav2{
-  width: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
 }
 
 .foot_cat{
-  margin-top: 2px;
-  background-color: rgb(96, 58, 58)
+ margin-top: 2px;
+ background-color: rgb(94, 83, 83);
+}
+.dropdown-toggle{
+  background-color: cadetblue;
+}
+
+.dropdown-menu{
+  background-color: rgba(0, 255, 255, 0.479);
+}
+
+/* pagina agregadas recientementes */
+
+/* header con logo y barra navegacion */
+
+.header_rec{
+  top: 0;
+  position: fixed;
+  height: 16vh;
+  z-index: 2;
+
+}
+.logo_rec{
+  margin-left: 5px;
+  height: 12vh;
+  }
+  
+.nav_rec{
+  background-color: rgb(49, 25, 29);
+  color: azure;
+  padding: 6px 10px; 
+  box-sizing: border-box; 
+  margin-right: 10px;
+  }
+
+.fondo_reciente{
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image:url(../imagenes/vison.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: 0;
+  }
+
+.section_rec{
+  display:flex;
+  height: 30vh;
+  width:auto;
+  gap: 20px;
+  overflow-y: scroll;
+ 
+}
+
+.div_rec{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 2fr);
+  grid-area: "1 2"
+             "1 3";
+
+}
+.img_grid{
+  width: 10px;
+  height: 10px;
+
+}
+.foot_rec{
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  
+
 }
