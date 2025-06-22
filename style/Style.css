@@ -29,6 +29,7 @@ y barra de navegacion */
 } 
 .hfmg{
   width: 25vw;
+  height: 16vh;
 } 
 
 /* el logo y los enlaces se ubicaran por encima de las imagenes */
@@ -51,13 +52,18 @@ y barra de navegacion */
   border-radius: 100%;
   border-style: outset;
   box-shadow: 10px 4px 8px rgb(77, 72, 72);
-
+  z-index: 2;
    
 } 
 
  
 nav ul li{
   display: inline-block;  
+ }
+
+ ul{
+ text-decoration: none;
+  list-style: none;  
  }
 
 .nav_princ, .nav_cat, .nav_rec{
