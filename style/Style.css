@@ -13,7 +13,7 @@ body{
 /* header del banner principal*/
 header{
   height: 16vh;
-   
+  display: flex; 
  }
 
 /* el banner estara formado por imagenes ubicadas horizontalmente y debajo del logo
