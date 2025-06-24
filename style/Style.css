@@ -7,7 +7,7 @@
 /* comenzaremos con la version movil de nuestra aplicacion */
 body{
  height: 100vh;
- width: 100vw;;
+ width: 100vw;
 }
 
 /* header del banner principal*/
@@ -214,43 +214,49 @@ margin-top: 4vh;
 
 /* header con logo y barra navegacion */
 
+.body_rec{
+  box-sizing: content-box;
+  justify-content: center;
+  align-content: center;
+;
+}
 .header_rec{
   height: 16vh;
   width: 100vw;
   position: fixed;
   top: 0;
   z-index: 4;
+  
 }
-.fondo_rec{
-  box-sizing: content-box;
-  top: 16.5vh;
-   height: 73vh;
+
+.main_rec{
+  display: flex;
+  flex-wrap: wrap;
   width: 100vw;
+  height: 74vh;
+
   background-image: url(../imagenes/vison.jpg);
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  position: fixed;
-  z-index: -1;
+
+  z-index: 0;
 
 }
-.img_grid{
- width: 100px;
- height: auto;
 
-}
 .section_rec{
-  display: flex;
+  display: grid;
+
   width:60vw;
-  height: auto;
-  margin-top: 30px;
+  height: 30vh;
   gap: 30px;
+  overflow: hidden;
+  grid-template-columns: 2fr 1fr;
 }
-.div_rec{
+
+.img_rec{
   display: grid;
   margin-left: 8vw;
-  width: 30vw;
+  width: 40vw;
   gap: 5px;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -273,5 +279,6 @@ margin-top: 4vh;
   width: 100vw;
   position: fixed;
   bottom: 0;
+
   z-index: 4;
 }
