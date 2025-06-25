@@ -30,6 +30,7 @@ y barra de navegacion */
 .hfmg{
   width: 25vw;
   height: 16vh;
+  object-fit: cover;
 } 
 
 
