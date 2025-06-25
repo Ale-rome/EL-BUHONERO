@@ -11,9 +11,9 @@ body{
 }
 
 /* header del banner principal*/
-header{
+.header_princ{
   height: 16vh;
-  display: flex; 
+  
  }
 
 /* el banner estara formado por imagenes ubicadas horizontalmente y debajo del logo
@@ -57,13 +57,12 @@ y barra de navegacion */
   z-index: 2;
    
 } 
+.nav_header{
+ margin-top: 8vh;
+  
+}
 
- 
-nav ul li {
-  display: inline-block; 
-   
- }
- 
+
 .nav_princ, .nav_cat, .nav_rec{
   text-decoration: none;
   list-style: none;   
@@ -81,11 +80,13 @@ nav ul li {
   font-weight: bold;
   z-index: 2;
 }  
-
-.nav_header{
- margin-top: 8vh;
-  
-}
+ 
+nav ul li {
+  display: inline-block; 
+  list-style: none;  
+  text-decoration: none; 
+ }
+ 
 
 /* imagen de fondo del main*/
 .main_index{
@@ -100,6 +101,7 @@ nav ul li {
   background-repeat: no-repeat;
   height: 70vh; 
   width: 100vw;
+  position: relative;
   font-style: italic;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 0.5fr 0.5fr 1fr 3.5fr 1fr;
@@ -114,7 +116,7 @@ nav ul li {
   color: rgb(48, 67, 49);
   text-shadow: 5px 5px 2px rgb(238, 224, 224);
   text-align: center;
-  position: relative;
+  position: absoluta;
   top: 20px;
   }
 
