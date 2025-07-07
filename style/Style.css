@@ -1,339 +1,382 @@
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    
 }
 
-/* comenzaremos con la version movil de nuestra aplicacion */
-
-
-/* header del banner principal*/
-.header_princ{
-  height: 16vh;
+html{
+    font-family: "Montserrat Alternates", sans-serif;
   
- }
-main{
-  align-content: center;
+
 }
 
-/* el banner estara formado por imagenes ubicadas horizontalmente y debajo del logo
-y barra de navegacion */
+/* este sera nuestro banner */
+figure.banner{
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 14vh;
+    gap: 1px;
+    
 
-.img_banner{ 
+
+}
+figure img.img_ban{
+    
+    width: 25%;
+    height: 14vh;
+}
+/* el header con nav y logo, ira sobre el banner de imagenes */
+.header_index{
   display: flex;
-  position: relative;
-  flex-direction: row; 
-  height: 16vh;
-  width: 100vw; 
-  z-index: 0;
+  width: 90vw;
+  padding: 5px;
+  gap: 50px;
   justify-content: space-between;
-} 
-img .hfmg{
-  width: 25vw;
-  height: 16vh;
-  object-fit: cover;
-   
-} 
-
-
-/* el logo y los enlaces se ubicaran por encima de las imagenes */
-
-.logo_nav{
-  display: flex;
-  justify-content: space-evenly;
-  padding: 10px;
+  align-content: center;
   position: absolute;
   top: 0px; 
-  left: 20px; 
   z-index: 50;
-  height: 16vh;
-  gap: 20vw;
+  
 }
 
 .logo{
-  height: 12vh;
-  width: auto;
-  background-color: rgba(46, 24, 24, 0.08);
+  height: 10vh;
+  background-color: rgba(230, 221, 221, 0.557);
   border-radius: 50px;
   border-style: outset;
-  box-shadow: 10px 4px 8px rgb(77, 72, 72);
-  
+  box-shadow: 10px 4px 8px rgb(77, 77, 72);
+  margin-left: 2vw;
    
 } 
-.nav_header{
- margin-top: 8vh;
-  
-}
-
-
-.nav_princ, .nav_cat, .nav_rec{
-  text-decoration: none;
-  list-style: none;   
-  width: 100%;
-  height: 100%;
-  padding: 4px 4px;
-  box-sizing: border-box;
-  border-radius: 16px;
-  border-style: outset;
-  font-size: 0.8rem;
-  font-style: italic;
-  background-color: rgb(233, 237, 241);
-  color: rgb(21, 50, 31);
-  letter-spacing: 1px;  
-  font-weight: bold;
-
-  
-}  
- 
-nav ul li {
-  display: inline-block; 
-  list-style: none;  
-  text-decoration: none; 
- }
- 
-
-/* imagen de fondo del main*/
-.main__index{
-  display: grid;
-  align-items: center;
-  text-align: center;
-  margin-top: .2vh;
-  margin-bottom: .2vh;
-  background-image: url(../imagenes/libros-blancos.jpg); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 91vh;
-  width: 100%;
-  font-style: italic;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0.5fr 0.5fr 1fr 3.5fr 1fr;
-  grid-template-areas: ". titulo titulo  ."
-                       ". . . ."
-                       "parrafo parrafo parrafo parrafo" 
-                       ". s1 s1 ."             
-                       "s2 s2 s2 s2";
- }
- .titulo{
-  grid-area: titulo;
-  color: rgb(48, 67, 49);
-  text-shadow: 5px 5px 2px rgb(238, 224, 224);
-  text-align: center;
-  position: absoluta;
-  top: 20px;
-  }
-
- .descripcion{
-  grid-area: parrafo;
-  color: rgb(75, 37, 10);
- }
-
- .frase1{
-  grid-area: s1;
-  background-color: rgba(184, 197, 197, 0.299);
-  font-size: 1.2rem;  
-  text-shadow: 2px 2px 2px rgb(97, 89, 89);
-  font-weight: bold;
-  color: rgb(26, 45, 34);
-  letter-spacing: 1.5px;
-  word-spacing: 3px;
-  line-height: 1.3;
-   }
-
-.frase2{
-  grid-area: s2;
-  color: rgb(43, 43, 72);
- }
-
-footer{
-  display: flex;  
-  justify-content: space-evenly;
-  height: 10vh;
-  background-color: rgb(56, 43, 34);
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  }
+.item_nav, .item_navc{
+    display: flex;
+    gap: 4vw;
+    margin-right: 20px;
     
   
-.img_foot{
- height: 5vh;
- margin-top: 2vh;
- border: 1px solid rgb(77, 62, 62);
- border-radius: 100%;
- box-shadow: 3px 4px 3px rgb(235, 172, 13);
+} 
+nav ul li{
+    list-style: none;
+    margin-top: 4vh; 
+    padding: 2px;
+    border-radius: 50px;
+    border-style: outset;
+    background-color: beige;
+    box-shadow: 10px 4px 8px rgb(39, 39, 33);
+    text-align: center;
+    align-items: center;
+  
+}
+
+nav ul li a{   
+
+    text-decoration: none;
+    color: rgb(14, 64, 44);
+}
+
+/* fondo de main, tendra una imagen acorde al contenido */
+.fondo_index{
+    width: 100%;
+    height:91vh;
+    background-image: url(../imagenes-buhonero/libro-blanco.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-content: center;
+    
+
+}
+
+/* nuestro main tendra dislay grid para definir la dispocision de nuestros elementos */
+
+
+.main_princ{
+    display: grid;
+    height:70vh;
+    width: 100vw;
+    padding: 10px;
+    color: whitesmoke;
+    position: relative;
+    gap: 10px;
+    grid-template-columns: 2fr 4fr 1fr 4fr  4fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr 4fr 3fr;
+    grid-template-areas: 
+    "titulo titulo titulo titulo titulo titulo"
+    ". . . parrafo parrafo ."
+    ". s1 s1 s1 . ."  
+    ". . . . . . "
+    ". s2 s2 s2 s2 ."
+}
+
+h1.titulo{
+    margin-top: 10px;
+    grid-area: titulo;
+    color: #940533;
+    font-weight: 500;
+    text-shadow: 4px 4px 1px rgb(172, 163, 80);
  
 }
 
-/* pagina catalogo */
+.parrafo{
+    grid-area: parrafo;
+    font-family: "Amatic SC", sans-serif;
+    text-align: left;
+    color: rgb(9, 47, 59);
+    text-shadow: 6px 6px 2px rgb(34, 61, 69, 0.5);
+    
+}
 
-/* header con barra de navegacion y bootstrap */
+.s1{
+    grid-area: s1;
+    font-family: "Special Elite", system-ui;
+    font-size: 20px;
+    color: rgb(0, 77, 64);
+    background: radial-gradient(circle at center, rgba(255, 235, 205, 1), transparent);
+    align-content: center;
+}
+
+.s2{
+    grid-area: s2;
+    background: radial-gradient(circle at center, rgba(255, 235, 238, 0.8), transparent);
+    color: rgb(62, 39, 35);
+    font-style: italic;
+    font-weight: 600;
+    align-content: center;
+    text-shadow: 6px 4px 1px rgb(251, 233, 231, 2);
+    
+   
+}
+
+footer{
+    display: flex;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 60px;
+    border-top: 2px solid rgb(63, 47, 47);
+    bottom: 0;
+     
+    
+}
+.foo_img{
+    height: 8vh;
+    background-color: aliceblue;
+    border-radius: 50px;
+    box-shadow: 10px 4px 8px rgb(77, 77, 72);
+   
+
+
+}
+/* ahora comenzara nuestra pagina de catalogo */
+
+/* header con barra de navegacion  */
 
 .header_cat, .header_rec{
   display: flex;  
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  background-image: url(../imagenes/oscuro_sombra.jpg);
+  background-image: url(../imagenes-buhonero/oscuro_sombra.jpg);
   background-size: cover;
   background-position: center;
-  width: 100vw;
-  height: 16vh;
+  width: 100%;
+  height: 14vh;
+  margin-bottom: 5px;
 }
 
-.nav_cat{
-padding: 4px 8px;
-margin-right: 10px; 
-}
 
-.navcat{
-margin-top: 4vh;
+.btn{
+    background-color: rgb(76, 222, 173);
+    color: rgb(74, 9, 9);
+}
+nav.item_nav{
+    display: flex;
+}
+.item_navc li{
+    width: 12vw;
+}
+/* fondo de pantanlla de la pagina catalogo */
+
+.div_cat{
+    background-image: url(../imagenes-buhonero/libro-colores.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    width: 100%;
 }
 .main_cat{
-  display: flex;
-  width: 100vw;
-  height: 74vh;
-  align-content: center;
-  text-align: center;
-  background-image: url(/imagenes/hojas_dobladas.jpg); 
-  background-size: cover;
-  
- }
+    display: grid;
+    height: 72vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr 2fr 1fr 2fr;
+    grid-template-areas: ". . . ."
+    "x x x ."
+    "xx xx xx xx"
+     ". . . .";
+}
+
 .cat_h1{
-  color: rgb(26, 20, 65);
-  text-shadow: 3px 2px 2px rgb(236, 233, 223);
-  font-style: italic;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  align-content: center;
-}
-
-.foot_cat{
-
- bottom: 0;
- background-color: rgb(94, 83, 83);
+    font-family: "Special Elite", system-ui;
+    grid-area: x;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    align-content: center;
+    text-align: center;
+    color: rgb(55, 15, 36);
+    background: radial-gradient(circle at center, rgba(255, 235, 238, 0.8), transparent);
+    text-shadow: 2px 2px 1px rgb(251, 233, 231, 1);
 
 }
-.dropdown-toggle{
-  background-color: cadetblue;
+
+.cat_h2{
+    font-family: "Montserrat Alternates", sans-serif;
+    grid-area: xx;
+    background: radial-gradient(circle at center, rgba(255, 235, 238, 0.8), transparent);
+    margin-left: 12px;
+    font-size: 20px;
+    align-content: flex-start;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(25, 38, 99);
+    text-shadow: 2px 2px 1px rgb(232, 245, 233);
+
 }
-
-.dropdown-menu{
-  background-color: rgba(0, 255, 255, 0.479);
+.foo_cat{
+    border-top: 4px solid whitesmoke;
 }
-
-/* pagina agregadas recientementes */
-
-/* header con logo y barra navegacion */
-
-.body_rec{
-  box-sizing: content-box;
-  
-  align-content: center;
-  display: flex; 
-  flex-direction: column;
-  height: 100vh;
-}
+/* cada item de la lista temdra un icono que la identifique */
 .header_rec{
-  height: 16vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 4;
-  margin-bottom: 2px;
+    height: 14vh;
 }
 
-.main_rec{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 74vh;
-  top:20vh;
-  background-image: url(../imagenes/luces-libros.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  flex: 1; 
-  overflow-y: auto;
-  padding: 1rem;
+.fondo_rec{
+    width: 100%;
+    height:85vh;
+    position: relative;
+    background-image: url(../imagenes-buhonero/libros-cordero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-content: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 0;
+    
 
 }
-
-.section_rec{
-  display: flex;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width:90vw;
-  height: 40vh;
-  gap: 20px;
-  overflow: hidden;
-  background-color: whitesmoke;
-  border: 2px orange solid;
-  box-shadow: 3px 3px 2px rgb(231, 230, 227);
+.foo_rec{
+    height: 10vh;
+    margin-top: 10px;
+    border-top: 3px solid whitesmoke;
+ 
+    z-index: 10;
+   
+}
+main.main_rec{
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    overflow-y: auto;
+    justify-content: center;
+  
+}
+main.main_rec section{
+    display: flex;
+    height: 34vh;
+    font-size: 0.7rem;
+    z-index: 10;
+    gap: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(0, 77, 64);
+    align-content: center;
+    
  
 }
-
-.img_rec{
-  display: grid;
-
-  width: 60vw;
-  height: 40vh;
-  gap: 5px;
-  grid-template-columns: 40vw 20vw;
-  grid-template-rows: 20vh 20vh;
-  grid-template-areas: 
-  "grid1 grid2"
-  "grid1 grid3";
-  
-
+div.img_rec{
+    width: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
 }
-div.igrid1{
-  grid-area: grid1;
-  height: 40vh;
-  width: 40vw;
-  background-image: url(../imagenes/amor-primavera-frente.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: 2px;
-  
-}
-div.igrid2{
-  grid-area: grid2;
-  height: 20vh;
-  width: 20vw;
-  background-image: url(../imagenes/amor-primavera-hoja.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 2px;
-  background-position: center;
-  
-}
-div.igrid3{
-  grid-area: grid3;
-  height: 20vh;
-  width: 20vw;
-  background-image: url(../imagenes/amor-primavera-reverso.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 2px;
-  background-position: center;
- 
+.sec1 div.img_rec{
+    background-image: url(../imagenes-buhonero/amor-primavera-frente.JPG);
+    
+   
 }
 
-.venta{
-  background-color: white;
-  height: 40vh;
+.sec2 div.img_rec{
+    background-image: url(../imagenes-buhonero/casa-espiritus-frente.JPG);
+   
 }
-.list__lib{
-  list-style-type: disc;
-}
-footer.foot_rec{
-  height: 10vh;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  margin-top: 5px;
-  z-index: 4;
 
+.sec3 div.img_rec{
+    background-image: url(../imagenes-buhonero/familia-normal-tapa.JPG);
+   
+}
+ul.vent_rec li a{
+    color: blanchedalmond;
+    text-decoration: none;
+}
+
+ul.vent_rec li{
+    color: blanchedalmond;
+    text-align: left;
+    list-style: none;
+    margin-bottom: 6px;
+}
+
+.list_lib1{  
+  background: url("../imagenes-buhonero/libro.png") no-repeat left center;
+  background-size: 12px 12px;
+  padding-left: 24px;
+  margin-bottom: 2px; 
+}
+.list_lib11{    
+  background: url("../imagenes-buhonero/autor.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib2{    
+  background: url("../imagenes-buhonero/editorial.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib3{    
+  background: url("../imagenes-buhonero/edicion.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib4{    
+  background: url("../imagenes-buhonero/cant-hojas.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib5{    
+  background: url("../imagenes-buhonero/medidas.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib6{  
+  background: url("../imagenes-buhonero/icono_buscar.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib7{
+  background: url("../imagenes-buhonero/pesos.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib8{  
+  background: url("../imagenes-buhonero/flecha.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
 }

@@ -1,74 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- <meta charset="UTF-8"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Buhonero-Inicio</title>
-  <link rel="stylesheet" href="style/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Buhonero-Página principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fredericka+the+Great&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-  <!-- aqui se presentara el banner de la pagina principal -->
-  <header class="header_princ">
-                 
-   <!-- imagenes del banner -->  
-   <figure class="img_banner">
-     
-      <img class="hfmg" src="./imagenes/sabana-libro.jpg" alt="Libro sobre una sabana">
-
-      <img class="hfmg" src="./imagenes/ventana-libros.jpg" alt="libron en la ventana">
-
-      <img class="hfmg" src="imagenes/biblioteca-libros.jpg" alt="biblioteca de libros">
-       
-      
-      <img class="hfmg" src="imagenes/camino-de-libros.jpg" alt="Camino de libros en hojas secas">
-
+    <!-- este sera el banner de nuestra pagina -->
+    <figure class="banner">
+        <img class="img_ban" src="imagenes-buhonero/libro_flor.jpg" alt="Libros con flores">
+        <img class="img_ban" src="imagenes-buhonero/libros-mesa.jpg" alt="Libros apilados">
+        <img class="img_ban" src="imagenes-buhonero/libro_vitrina.jpg" alt="Libros en na vitrina">
+        <img class="img_ban" src="imagenes-buhonero/libros_anteojos.jpg" alt="Libros debajo de anteojos">
     </figure>
-        
 
-    <div class="logo_nav">
+    <!-- header de pagina principal -->
+    <header class="header_index">   
       <!-- logo de la pagina -->
-      <img class="logo" src="imagenes/logo.png" alt="Logo de la página">
+      <div>
+           <img class="logo" src="imagenes-buhonero/logo-dorado.PNG" alt="Logo de la página">
+
+       </div> 
 
       <!--nuestra barra de navegacion  -->
-      <nav class="nav_header">
-        <ul>
-          <li>
-            <a class="nav_princ" href="pages/catalogo.html">Libros</a>
-         </li>
+      <div>
+          <nav>
+               <ul class="item_nav">
+                   <li>
+                       <a href="paginas/catalogo1.html">Catalogo</a>
+                  </li>
                   
-         <li>
-            <a class="nav_princ" href="#">Galería</a>
-         </li>
+                   <li>
+                       <a href="#">Galería</a>
+                   </li>
 
-          <li>
-            <a class="nav_princ" href="#">Carrito</a>
-          </li>
+                   <li>
+                       <a href="#">Carrito</a>
+                   </li>
 
-        </ul>
+                </ul>
 
-      </nav>
-
-    </div>
+            </nav>
+      </div>
+    </header>
       
-      
-  </header>
-  <main class="main__index">
-    <h1 class="titulo">El Buhonero</h1>
-    <h2 class="descripcion">Venta de libros usados</h2>
+   <div class="fondo_index">    
 
-    <h3 class="frase1"> En esta página encontrarás gran variedad de géneros literarios en excelente estado. </h3>
-    <h3 class="frase2">"Adoptá una historia con pasado y regalale un nuevo comienzo."</h3>
-   
+        <main class="main_princ"> 
 
-  </main>
+           <h1 class="titulo">El Buhonero</h1>
+           <h2 class="parrafo">Libros usados</h2>
+           <p class="s1">"Adoptá una historia con pasado y regalale un nuevo comienzo."</p>
+           <p class="s2">Gran variedad de géneros literarios en excelente estado.</p>
 
-  <footer>
-    <a href=""><img class="img_foot" src="imagenes/facebook-circle-logo-24.png" alt="Enlace a faccebook"></a>
-        
-    <a href=""><img class="img_foot" src="imagenes/instagram.jpeg" alt="Enlace a instagran"></a>
-        
-  </footer>
     
+        </main>
+        <footer >
+
+             <img class="foo_img" src="imagenes-buhonero/facebook.png" alt="logo de facebiik">
+             <img class="foo_img" src="imagenes-buhonero/instagram.png" alt="logo de instagran">
+       </footer>
+   </div>   
 </body>
 </html>
