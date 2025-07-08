@@ -26,21 +26,21 @@ html{
   height: 18vh;
 }
 .ban1{
-    background-image: url(/imagenes-buhonero/banner1.jpg);   
+    background-image: url(../imagenes-buhonero/banner1.jpg);   
 }
 .ban2{
-    background-image: url(/imagenes-buhonero/banner2.jpg);
+    background-image: url(../imagenes-buhonero/banner2.jpg);
     width: 10%;
    
 }
 .ban3{
-    background-image: url(/imagenes-buhonero/banner3.jpg);
+    background-image: url(../imagenes-buhonero/banner3.jpg);
 }
 .ban4{
-    background-image: url(/imagenes-buhonero/banner4.jpg);
+    background-image: url(../imagenes-buhonero/banner4.jpg);
 }
 .ban5{
-    background-image: url(/imagenes-buhonero/banner5.jpg);
+    background-image: url(../imagenes-buhonero/banner5.jpg);
 }
 
 .logo{  
