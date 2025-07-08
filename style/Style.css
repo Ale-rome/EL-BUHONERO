@@ -6,32 +6,45 @@
 }
 
 html{
-    font-family: "Montserrat Alternates", sans-serif;
-  
-
+    font-family: "Montserrat Alternates", sans-serif; 
 }
 
 /* este sera nuestro banner */
- .header_index{
-  background-image: url(../imagenes-buhonero/oscuro_sombra.jpg);
+.header_index{ 
+   display: flex;  
+   width: 100%;
+   height: 18vh;
+   gap: 1px;
+   top: 0px;
+   justify-content: space-between;
+}
+.bane{   
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 14vh;
-  display: flex;
-
-  gap: 50px;
-  justify-content: space-between;
-  align-content: center;
-  position: absolute;
-  top: 0px; 
-  z-index: 50;
-  
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 18vh;
+}
+.ban1{
+    background-image: url(/imagenes-buhonero/banner1.jpg);   
+}
+.ban2{
+    background-image: url(/imagenes-buhonero/banner2.jpg);
+    width: 10%;
+   
+}
+.ban3{
+    background-image: url(/imagenes-buhonero/banner3.jpg);
+}
+.ban4{
+    background-image: url(/imagenes-buhonero/banner4.jpg);
+}
+.ban5{
+    background-image: url(/imagenes-buhonero/banner5.jpg);
 }
 
-.logo{
-  
-  height: 10vh;
+.logo{  
+  height: 14vh;
   background-color: rgba(230, 221, 221, 0.557);
   border-radius: 50px;
   border-style: outset;
@@ -39,17 +52,11 @@ html{
   margin-left: 2vw;
   margin-top: 10px; 
 } 
-.item_nav, .item_navc{
-    display: flex;
-    gap: 4vw;
-    margin-right: 20px;
-    
-  
-} 
+
 nav ul li{
     list-style: none;
-    margin-top: 4vh; 
-    padding: 2px;
+    margin-top: 60%; 
+    padding: 4px 6px;
     border-radius: 50px;
     border-style: outset;
     background-color: beige;
@@ -68,15 +75,14 @@ nav ul li a{
 /* fondo de main, tendra una imagen acorde al contenido */
 .fondo_index{
     width: 100%;
-    height:90vh;
-    margin-top: 15vh;
+    height:87vh;
     background-image: url(../imagenes-buhonero/libro-blanco.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     align-content: center;
-    
+    position: relative;
 
 }
 
@@ -85,11 +91,11 @@ nav ul li a{
 
 .main_princ{
     display: grid;
-    height:74vh;
+    height:70vh;
     width: 100vw;
     padding: 10px;
+    margin-top: 5px;
     color: whitesmoke;
-
     gap: 10px;
     grid-template-columns: 2fr 4fr 1fr 4fr  4fr 1fr;
     grid-template-rows: 1fr 1fr 4fr 4fr 3fr;
@@ -98,7 +104,7 @@ nav ul li a{
     ". . . parrafo parrafo ."
     ". s1 s1 s1 . ."  
     ". . . . . . "
-    ". s2 s2 s2 s2 ."
+    ". s2 s2 s2 . ."
 }
 
 h1.titulo{
@@ -172,9 +178,10 @@ footer{
   background-image: url(../imagenes-buhonero/oscuro_sombra.jpg);
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 14vh;
+  width: 100vw;
+  height: 18vh;
   margin-bottom: 5px;
+
 }
 
 
@@ -182,11 +189,13 @@ footer{
     background-color: rgb(76, 222, 173);
     color: rgb(74, 9, 9);
 }
-nav.item_nav{
+.header_cat nav ul{
     display: flex;
+    gap: 50px;
 }
-.item_navc li{
+.header_cat nav ul li{
     width: 12vw;
+    margin-bottom: 40%;
 }
 /* fondo de pantanlla de la pagina catalogo */
 
@@ -195,12 +204,12 @@ nav.item_nav{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 85vh;
+    height: 80vh;
     width: 100%;
 }
 .main_cat{
     display: grid;
-    height: 72vh;
+    height: 65vh;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 0.2fr 2fr 1fr 2fr;
     grid-template-areas: ". . . ."
@@ -238,15 +247,17 @@ nav.item_nav{
 }
 .foo_cat{
     border-top: 4px solid whitesmoke;
+    height: 12vh;
+    margin-top: 10px;
 }
 /* cada item de la lista temdra un icono que la identifique */
 .header_rec{
-    height: 14vh;
+    height: 18vh;
 }
 
 .fondo_rec{
     width: 100%;
-    height:85vh;
+    height:80vh;
     position: relative;
     background-image: url(../imagenes-buhonero/libros-cordero.jpg);
     background-position: center;
@@ -254,22 +265,20 @@ nav.item_nav{
     background-repeat: no-repeat;
     text-align: center;
     align-content: center;
-    background-attachment: fixed;
-    overflow: hidden;
-    z-index: 0;
-    
+    position: relative;
 
 }
 .foo_rec{
-    height: 10vh;
+    height: 12vh;
     margin-top: 10px;
     border-top: 3px solid whitesmoke;
  
     z-index: 10;
    
 }
+
 main.main_rec{
-    height: 70vh;
+    height: 67vh;
     display: flex;
     flex-wrap: wrap;
     flex: 1;
@@ -312,6 +321,15 @@ div.img_rec{
     background-image: url(../imagenes-buhonero/familia-normal-tapa.JPG);
    
 }
+.item_nav{
+    display: flex;
+    gap: 50px;
+}
+.item_nav li{
+    width: 14vw;
+    margin-bottom: 40%;
+}
+
 ul.vent_rec li a{
     color: blanchedalmond;
     text-decoration: none;
