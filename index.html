@@ -11,49 +11,40 @@
 </head>
 <body>
     <!-- este sera el banner de nuestra pagina -->
-   
-    <!-- header de pagina principal -->
-    <header class="header_index">   
-      <!--div con barra de navegacion  -->
-        <div class="bane ban1">
+   <figure class="banner">
+        <img class="img_ban" src="imagenes-buhonero/banner1.jpg" alt="Libros con flores">
+        <img class="img_ban ban_desk" src="imagenes-buhonero/banner2.jpg" alt="Libros con una figura">
+        <img class="img_ban" src="imagenes-buhonero/banner3.jpg" alt="Libro abierto">
+        <img class="img_ban" src="imagenes-buhonero/banner4.jpg" alt="biblioteca">
+        <img class="img_ban" src="imagenes-buhonero/banner5.jpg" alt="Libros">
+   </figure>
+          
+    <!-- header de pagina principal -->               
+    <header class="header_index">
+        <div class="bane">
             <!-- logo de la pagina -->
-           <div class="fondo_logo">
-               <img class="logo" src="./imagenes-buhonero/logo-dorado.PNG" alt="Logo de la página">
-            </div> 
-        </div>
+            <img class="logo" src="./imagenes-buhonero/logo-dorado.PNG" alt="Logo de la página">
 
-        <div class="bane ban2"></div>
+            <!-- barra de navegación -->
 
-        <div class="bane ban3">
-            <nav>
-               <ul class="item_nav">
-                    <li>
-                        <a href="./paginas/catalogo1.html">Catalogo</a>
-                    </li>
-                </ul>
-            </nav>
-           
-        </div>
+            <nav class="item_nav">
+               <ul class="desplegable">
+                   <li class="desp">
+                      <a href="#">Cátalogo▾</a>
+                       
+                      <ul class="cata1">
+                           <li><a href="./paginas/catalogo1.html">Por género</a></li>
+                           <li><a href="#">Por imagenes</a></li>
+                       </ul>
+                   </li>
 
-        <div class="bane ban4">
-            <nav>
-                <ul class="item_nav">
-                    <li>
-                        <a href="#">Galeria</a>
-                    </li>
-                </ul>
-            </nav>
+                   <li class="mensaje">
+                      <a href="#">Mensaje</a>
+                   </li>
+               </ul>
+          </nav>                      
         </div>
-        
-        <div class="bane ban5">
-            <nav>
-                <ul class="item_nav">
-                    <li>
-                        <a href="#">Carrito</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>                
+                   
     </header>
       
    <div class="fondo_index"> 
@@ -65,11 +56,13 @@
            <p class="s2">Gran variedad de géneros literarios en excelente estado.</p>
     
         </main>
-        <footer >
+       <footer >
 
-             <img class="foo_img" src="./imagenes-buhonero/facebook.png" alt="logo de facebook">
-             <img class="foo_img" src="./imagenes-buhonero/instagram.png" alt="logo de instagran">
+            <img class="foo_img" src="./imagenes-buhonero/facebook.png" alt="logo de facebook">
+            <img class="foo_img" src="./imagenes-buhonero/instagram.png" alt="logo de instagran">
        </footer>
-   </div>   
-</body>
-</html>/
+            
+ 
+    </body>
+
+</html>

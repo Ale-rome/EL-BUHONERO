@@ -8,74 +8,114 @@
 html{
     font-family: "Montserrat Alternates", sans-serif; 
 }
+/* Estilos del menú principal */
+figure.banner{
+    display: flex;
+    width: 100%;
+    height:20vh;
+}
+.ban_desk{
+    display: none;
+}
+.img_ban{
+    width: 25%;
+}
+.item_nav ul {
+ 
+  display: flex;
 
-/* este sera nuestro banner */
-.header_index{ 
-   display: flex;  
+}
+
+.item_nav a:hover {
+  background: #769585;
+  border-radius: 50px;
+}
+
+/* Submenús ocultos por defecto */
+.cata1 {
+  display: none;
+  position: absolute; 
+ 
+  z-index: 60;
+}
+
+
+
+.desp:hover .cata1 {
+  display: block;
+}
+.cata1 {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+
+.desp:hover .cata1 {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header_index{   
    width: 100%;
-   height: 18vh;
-   gap: 1px;
+   height: 20vh;
+   position: absolute;  
    top: 0px;
    justify-content: space-between;
 }
-.bane{   
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 25%;
+.bane{ 
+  display: flex;
+  gap: 20vw;
+  position: absolute;
+  width: 90%;
   height: 18vh;
-}
-.ban1{
-    background-image: url(../imagenes-buhonero/banner1.jpg);   
-}
-.ban2{
-    background-image: url(../imagenes-buhonero/banner2.jpg);
-    width: 10%;
-   
-}
-.ban3{
-    background-image: url(../imagenes-buhonero/banner3.jpg);
-}
-.ban4{
-    background-image: url(../imagenes-buhonero/banner4.jpg);
-}
-.ban5{
-    background-image: url(../imagenes-buhonero/banner5.jpg);
 }
 
 .logo{  
-  height: 14vh;
+  height: 16vh;
   background-color: rgba(230, 221, 221, 0.557);
-  border-radius: 50px;
+  border-radius: 20px;
   border-style: outset;
   box-shadow: 10px 4px 8px rgb(77, 77, 72);
-  margin-left: 2vw;
-  margin-top: 10px; 
+  margin-left: 4%;
+  margin-top: 8px; 
 } 
+.item_nav{
+    z-index: 80;
+    display: flex;
+    width: 60vw;
+}
+.desplegable{
+    gap: 50px;
+    display: flex;
+
+}
 
 nav ul li{
     list-style: none;
-    margin-top: 60%; 
-    padding: 4px 6px;
-    border-radius: 50px;
-    border-style: outset;
-    background-color: beige;
-    box-shadow: 10px 4px 8px rgb(39, 39, 33);
-    text-align: center;
-    align-items: center;
-  
+    margin-top: 50px; 
+   
+    
 }
 
 nav ul li a{   
-
+    display: inline-block;
+    padding: 3px;
+    text-decoration: none;  
     text-decoration: none;
     color: rgb(14, 64, 44);
+    border-style: outset;
+    background-color: beige;
+    border-radius: 20px;    
+    box-shadow: 10px 4px 8px rgb(39, 39, 33);
 }
 
 /* fondo de main, tendra una imagen acorde al contenido */
 .fondo_index{
     width: 100%;
-    height:87vh;
+    height:85vh;
     background-image: url(../imagenes-buhonero/libro-blanco.jpg);
     background-position: center;
     background-size: cover;
@@ -91,7 +131,7 @@ nav ul li a{
 
 .main_princ{
     display: grid;
-    height:70vh;
+    height:68vh;
     width: 100vw;
     padding: 10px;
     margin-top: 5px;
