@@ -39,7 +39,15 @@ figure.banner{
   z-index: 60;
 }
 
+.cata1 a{
+    display: inline-block;
+    padding: 4px 50px; 
+    text-align: center;
+    border-color: antiquewhite;
+    background-color: darkgreen;
+    color: wheat;
 
+}
 
 .desp:hover .cata1 {
   display: block;
@@ -219,37 +227,41 @@ footer{
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 18vh;
+  height: 20vh;
   margin-bottom: 5px;
 
 }
 
 
 .btn{
+    margin-left: 5px;
     background-color: rgb(76, 222, 173);
     color: rgb(74, 9, 9);
 }
+.header_cat nav{
+    margin-right: 10px;
+}
 .header_cat nav ul{
     display: flex;
-    gap: 50px;
+    gap: 10px;
 }
-.header_cat nav ul li{
-    width: 12vw;
+.header_cat nav ul li a{
+    width: 16vw;
     margin-bottom: 40%;
+    text-align: center;
 }
 /* fondo de pantanlla de la pagina catalogo */
 
 .div_cat{
-    background-image: url(../imagenes-buhonero/libro-colores.jpg);
+    background-image: url(../imagenes-buhonero/1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
     width: 100%;
 }
 .main_cat{
     display: grid;
-    height: 65vh;
+    height: 69vh;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 0.2fr 2fr 1fr 2fr;
     grid-template-areas: ". . . ."
@@ -267,7 +279,7 @@ footer{
     align-content: center;
     text-align: center;
     color: rgb(55, 15, 36);
-    background: radial-gradient(circle at center, rgba(255, 235, 238, 0.8), transparent);
+    background: radial-gradient(circle at center, rgba(255, 235, 238, 2), transparent);
     text-shadow: 2px 2px 1px rgb(251, 233, 231, 1);
 
 }
@@ -275,7 +287,7 @@ footer{
 .cat_h2{
     font-family: "Montserrat Alternates", sans-serif;
     grid-area: xx;
-    background: radial-gradient(circle at center, rgba(255, 235, 238, 0.8), transparent);
+    background: radial-gradient(circle at center, rgba(255, 235, 238, 2), transparent);
     margin-left: 12px;
     font-size: 20px;
     align-content: flex-start;
@@ -285,15 +297,12 @@ footer{
     text-shadow: 2px 2px 1px rgb(232, 245, 233);
 
 }
-.foo_cat{
+.foo_cat, .foo_rec{
     border-top: 4px solid whitesmoke;
     height: 12vh;
     margin-top: 10px;
 }
 /* cada item de la lista temdra un icono que la identifique */
-.header_rec{
-    height: 18vh;
-}
 
 .fondo_rec{
     width: 100%;
@@ -308,17 +317,10 @@ footer{
     position: relative;
 
 }
-.foo_rec{
-    height: 12vh;
-    margin-top: 10px;
-    border-top: 3px solid whitesmoke;
- 
-    z-index: 10;
-   
-}
+
 
 main.main_rec{
-    height: 67vh;
+    height: 60vh;
     display: flex;
     flex-wrap: wrap;
     flex: 1;
@@ -361,13 +363,16 @@ div.img_rec{
     background-image: url(../imagenes-buhonero/familia-normal-tapa.JPG);
    
 }
+.header_rec{
+    gap: 100px;
+}
 .item_nav{
     display: flex;
-    gap: 50px;
+    gap: 20px;
 }
 .item_nav li{
     width: 14vw;
-    margin-bottom: 40%;
+    margin-bottom: 6vh;
 }
 
 ul.vent_rec li a{
@@ -380,6 +385,7 @@ ul.vent_rec li{
     text-align: left;
     list-style: none;
     margin-bottom: 6px;
+   
 }
 
 .list_lib1{  
@@ -428,3 +434,112 @@ ul.vent_rec li{
   background-size: 16px 16px;
   padding-left: 24px; 
 }
+/* medidas para tablet */
+
+/* página principal */
+@media (min-width: 800px){
+    nav ul li a{   
+    font-size: 1.8rem;
+    padding: 6px 20px;
+}
+    .desplegable{
+    gap: 120px;
+}
+    h1.titulo{
+    font-weight: 600;
+    font-size: 3rem;
+    text-shadow: 6px 6px 1px rgb(172, 163, 80);
+ 
+}
+
+.parrafo{
+    font-size: 3rem;     
+}
+
+.s1{
+    font-size: 30px;
+    }
+
+.s2{
+    font-size: 30px;      
+   }
+.main_princ{
+    height:64vh;
+}
+.fondo_index{
+   height:82vh;
+}
+/* catalogo */
+.btn{
+    padding: 20px;
+    font-size: 28px;
+}
+.cat_h1{
+    font-size: 28px;
+    font-weight: 600;
+   }
+
+.cat_h2{
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 28px;
+    font-weight: 900;
+  
+}
+.main_cat{
+    height: 66vh;}
+
+
+/* recibidas recientemente */
+
+main.main_rec section{
+    height:30vh;
+    font-size: 1.4rem;
+    gap: 30px;
+    padding: 30px;
+    margin: 30px;     
+}
+}
+
+/* desktop */
+
+@media (min-width: 1280px){
+    
+/* página principal */
+
+.bane{
+    gap: 500px;
+}
+    h1.titulo{
+    font-weight: 600;
+    font-size: 3rem;
+    text-shadow: 6px 6px 1px rgb(172, 163, 80);
+ 
+}
+
+/* catalogo */
+.header_cat nav ul{
+    gap: 30px;
+}
+.header_cat nav ul li a{
+    margin-bottom: 20%;
+
+}
+
+/* recibidas recientemente */
+
+main.main_rec section{
+    height:45vh;
+    font-size: 1.5rem;    
+}
+.item_nav{
+
+    gap: 50px;
+}
+.header_rec{
+    gap: 600px;
+   
+}
+}
+
+ 
