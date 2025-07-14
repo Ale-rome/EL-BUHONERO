@@ -1,0 +1,82 @@
+//mixin con parametros
+@mixin grid($grid, $column, $row) {
+    display: $grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+}
+@mixin box-estilo($estilo, $backcol, $radius, $shadow) {
+   border-style: $estilo;
+   background-color: $backcol;
+   border-radius: $radius;    
+   box-shadow: $shadow;
+}
+//mixin sin parametros
+@mixin viñetas {
+    background-size: 16px 16px;
+    padding-left: 24px;
+    margin-bottom: 2px; 
+}
+
+@mixin estilo_texto($fuente, $px, $color, $text, $bk, $sombra) {
+    font-family: $fuente;
+    font-size: $px;
+    color: $color;
+    text-align: $text;
+    background: $bk;
+    text-shadow: $sombra;
+}
+   
+
+//mixin con parametros y estilos fijos
+@mixin background-fondo($imagen, $size, $position, $shadow) {
+    background-image: url($imagen);
+    background-size: $size;
+    background-position: $position;
+    background-repeat: no-repeat;
+    box-shadow: $shadow;
+}
+
+@mixin medida($ancho, $alto, $top) { 
+  width: $ancho;
+  height: $alto;
+  margin: $top;
+}
+
+@mixin flex($alt, $baj, $ubicacion, $item, $gap) {
+    display: flex;
+    width: $alt;
+    height: $baj;        
+    justify-content: $ubicacion;
+    align-items: $item;
+    gap: $gap;   
+}
+@mixin position($cont, $it, $acont, $pos, $z){
+    justify-content: $cont;
+    align-items: $it;
+    align-content: $acont;
+    position: $pos;
+    z-index: $z;
+}
+@mixin hover($opa, $vis, $tray){
+   opacity: $opa;
+   visibility: $vis;
+   transform: translateY($tray);
+}
+@mixin estilo-ul($med) {
+    display: flex;
+    gap: $med;
+}
+
+@mixin estilo-li{
+
+}
+
+@mixin estilo-a($padd, $alig, $border, $back, $col) {
+    display: inline-block;
+    padding: $padd; 
+    text-align: $alig;
+    border-color: $border;
+    background-color: $back;
+    color: $col;
+}
+

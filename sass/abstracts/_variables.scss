@@ -1,0 +1,29 @@
+//fuentes
+$font-primario: "Montserrat Alternates", sans-serif; 
+$font-secundario: "Special Elite", system-ui;
+$font-terciario: "Amatic SC", sans-serif;
+
+
+//paleta de colores
+
+$color-reciente:blanchedalmond; 
+$color-hover: #769585;
+$color-a: wheat;
+$color-borde: antiquewhite;
+$color-item: darkgreen;
+$color-card: rgb(0, 77, 64);
+
+//sombra
+$sombra-a: 10px 4px 8px rgb(39, 39, 33);
+$sombra-logo: 10px 4px 8px rgb(77, 77, 72);
+$sombra-titulo-cat: 2px 2px 1px rgb(251, 233, 231, 1);
+$sombra-titulo-princ: 4px 4px 1px rgb(172, 163, 80);
+$sombra-sub-cat: 2px 2px 1px rgb(232, 245, 233);
+$sombra-parrafo: 6px 6px 2px rgb(34, 61, 69, 0.5);
+
+
+//sombra radial
+
+$back-radial-cat1: radial-gradient(circle at center, rgba(255, 235, 238, 2), transparent);
+$back-radial-s2: radial-gradient(circle at center, rgba(255, 235, 238, 0.8), transparent);
+$back-radial-s1: radial-gradient(circle at center, rgba(255, 235, 205, 1), transparent);
