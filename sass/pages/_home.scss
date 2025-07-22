@@ -114,7 +114,7 @@ header.header_index{
 
 div.fondo_index{
 
-   background-image: url(/imagenes-buhonero/libro-blanco.png);
+   background-image: url(/img/libro-blanco.png);
     @include mixin.background-fondo(cover, center);
     @include mixin.medida(100%, 100%);
     text-align: center;
@@ -230,7 +230,7 @@ div.fondo_index{
 /*esta sera la pagina de catalogo por genero*/
 
 header.h_cat{
-    background-image: url(/imagenes-buhonero/oscuro_sombra.jpg);
+    background-image: url(/img/oscuro_sombra.jpg);
     @include mixin.background-fondo(cover, center);
     @include mixin.flex(100vw, 20vh);
     justify-content: space-around;
@@ -264,7 +264,7 @@ header.h_cat{
 }
 
 div.div_cat{
-    background-image: url(/imagenes-buhonero/1.jpg);
+    background-image: url(/img/1.jpg);
     @include mixin.background-fondo(cover, center);
     width: 100%;
     

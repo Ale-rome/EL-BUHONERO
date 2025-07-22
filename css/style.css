@@ -170,7 +170,7 @@ header.header_index div.logo nav ul li.mensaje a:hover {
 
 /* nuestro main tendra display grid*/
 div.fondo_index {
-  background-image: url(/imagenes-buhonero/libro-blanco.png);
+  background-image: url(/img/libro-blanco.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -285,7 +285,7 @@ div.fondo_index footer figure img.foo_img {
 
 /*esta sera la pagina de catalogo por genero*/
 header.h_cat {
-  background-image: url(/imagenes-buhonero/oscuro_sombra.jpg);
+  background-image: url(/img/oscuro_sombra.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
