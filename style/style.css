@@ -1,0 +1,545 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    
+}
+
+html{
+    font-family: "Montserrat Alternates", sans-serif; 
+}
+/* Estilos del menú principal */
+figure.banner{
+    display: flex;
+    width: 100%;
+    height:20vh;
+}
+.ban_desk{
+    display: none;
+}
+.img_ban{
+    width: 25%;
+}
+.item_nav ul {
+ 
+  display: flex;
+
+}
+
+.item_nav a:hover {
+  background: #769585;
+  border-radius: 50px;
+}
+
+/* Submenús ocultos por defecto */
+.cata1 {
+  display: none;
+  position: absolute; 
+ 
+  z-index: 60;
+}
+
+.cata1 a{
+    display: inline-block;
+    padding: 4px 50px; 
+    text-align: center;
+    border-color: antiquewhite;
+    background-color: darkgreen;
+    color: wheat;
+
+}
+
+.desp:hover .cata1 {
+  display: block;
+}
+.cata1 {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+
+.desp:hover .cata1 {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header_index{   
+   width: 100%;
+   height: 20vh;
+   position: absolute;  
+   top: 0px;
+   justify-content: space-between;
+}
+.bane{ 
+  display: flex;
+  gap: 20vw;
+  position: absolute;
+  width: 90%;
+  height: 18vh;
+}
+
+.logo{  
+  height: 16vh;
+  background-color: rgba(230, 221, 221, 0.557);
+  border-radius: 20px;
+  border-style: outset;
+  box-shadow: 10px 4px 8px rgb(77, 77, 72);
+  margin-left: 4%;
+  margin-top: 8px; 
+} 
+.item_nav{
+    z-index: 80;
+    display: flex;
+    width: 60vw;
+}
+.desplegable{
+    gap: 50px;
+    display: flex;
+
+}
+
+nav ul li{
+    list-style: none;
+    margin-top: 50px; 
+   
+    
+}
+
+nav ul li a{   
+    display: inline-block;
+    padding: 3px;
+    text-decoration: none;  
+    text-decoration: none;
+    color: rgb(14, 64, 44);
+    border-style: outset;
+    background-color: beige;
+    border-radius: 20px;    
+    box-shadow: 10px 4px 8px rgb(39, 39, 33);
+}
+
+/* fondo de main, tendra una imagen acorde al contenido */
+.fondo_index{
+    width: 100%;
+    height:85vh;
+    background-image: url(../imagenes-buhonero/libro-blanco.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-content: center;
+    position: relative;
+
+}
+
+/* nuestro main tendra dislay grid para definir la dispocision de nuestros elementos */
+
+
+.main_princ{
+    display: grid;
+    height:68vh;
+    width: 100vw;
+    padding: 10px;
+    margin-top: 5px;
+    color: whitesmoke;
+    gap: 10px;
+    grid-template-columns: 2fr 4fr 1fr 4fr  4fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr 4fr 3fr;
+    grid-template-areas: 
+    "titulo titulo titulo titulo titulo titulo"
+    ". . . parrafo parrafo ."
+    ". s1 s1 s1 . ."  
+    ". . . . . . "
+    ". s2 s2 s2 . ."
+}
+
+h1.titulo{
+    margin-top: 10px;
+    grid-area: titulo;
+    color: #940533;
+    font-weight: 500;
+    text-shadow: 4px 4px 1px rgb(172, 163, 80);
+ 
+}
+
+.parrafo{
+    grid-area: parrafo;
+    font-family: "Amatic SC", sans-serif;
+    text-align: left;
+    color: rgb(9, 47, 59);
+    text-shadow: 6px 6px 2px rgb(34, 61, 69, 0.5);
+    
+}
+
+.s1{
+    grid-area: s1;
+    font-family: "Special Elite", system-ui;
+    font-size: 20px;
+    color: rgb(0, 77, 64);
+    background: radial-gradient(circle at center, rgba(255, 235, 205, 1), transparent);
+    align-content: center;
+}
+
+.s2{
+    grid-area: s2;
+    background: radial-gradient(circle at center, rgba(255, 235, 238, 0.8), transparent);
+    color: rgb(62, 39, 35);
+    font-style: italic;
+    font-weight: 600;
+    align-content: center;
+    text-shadow: 6px 4px 1px rgb(251, 233, 231, 2);
+    
+   
+}
+
+footer{
+    display: flex;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 60px;
+    border-top: 2px solid rgb(63, 47, 47);
+    bottom: 0;
+     
+    
+}
+.foo_img{
+    height: 8vh;
+    background-color: aliceblue;
+    border-radius: 50px;
+    box-shadow: 10px 4px 8px rgb(77, 77, 72);
+   
+
+
+}
+/* ahora comenzara nuestra pagina de catalogo */
+
+/* header con barra de navegacion  */
+
+.header_cat, .header_rec{
+  display: flex;  
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../imagenes-buhonero/oscuro_sombra.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 20vh;
+  margin-bottom: 5px;
+
+}
+
+
+.btn{
+    margin-left: 5px;
+    background-color: rgb(76, 222, 173);
+    color: rgb(74, 9, 9);
+}
+.header_cat nav{
+    margin-right: 10px;
+}
+.header_cat nav ul{
+    display: flex;
+    gap: 10px;
+}
+.header_cat nav ul li a{
+    width: 16vw;
+    margin-bottom: 40%;
+    text-align: center;
+}
+/* fondo de pantanlla de la pagina catalogo */
+
+.div_cat{
+    background-image: url(../imagenes-buhonero/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.main_cat{
+    display: grid;
+    height: 69vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr 2fr 1fr 2fr;
+    grid-template-areas: ". . . ."
+    "x x x ."
+    "xx xx xx xx"
+     ". . . .";
+}
+
+.cat_h1{
+    font-family: "Special Elite", system-ui;
+    grid-area: x;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    align-content: center;
+    text-align: center;
+    color: rgb(55, 15, 36);
+    background: radial-gradient(circle at center, rgba(255, 235, 238, 2), transparent);
+    text-shadow: 2px 2px 1px rgb(251, 233, 231, 1);
+
+}
+
+.cat_h2{
+    font-family: "Montserrat Alternates", sans-serif;
+    grid-area: xx;
+    background: radial-gradient(circle at center, rgba(255, 235, 238, 2), transparent);
+    margin-left: 12px;
+    font-size: 20px;
+    align-content: flex-start;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(25, 38, 99);
+    text-shadow: 2px 2px 1px rgb(232, 245, 233);
+
+}
+.foo_cat, .foo_rec{
+    border-top: 4px solid whitesmoke;
+    height: 12vh;
+    margin-top: 10px;
+}
+/* cada item de la lista temdra un icono que la identifique */
+
+.fondo_rec{
+    width: 100%;
+    height:80vh;
+    position: relative;
+    background-image: url(../imagenes-buhonero/libros-cordero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-content: center;
+    position: relative;
+
+}
+
+
+main.main_rec{
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    overflow-y: auto;
+    justify-content: center;
+  
+}
+main.main_rec section{
+    display: flex;
+    height: 34vh;
+    font-size: 0.7rem;
+    z-index: 10;
+    gap: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(0, 77, 64);
+    align-content: center;
+    
+ 
+}
+div.img_rec{
+    width: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.sec1 div.img_rec{
+    background-image: url(../imagenes-buhonero/amor-primavera-frente.JPG);
+    
+   
+}
+
+.sec2 div.img_rec{
+    background-image: url(../imagenes-buhonero/casa-espiritus-frente.JPG);
+   
+}
+
+.sec3 div.img_rec{
+    background-image: url(../imagenes-buhonero/familia-normal-tapa.JPG);
+   
+}
+.header_rec{
+    gap: 100px;
+}
+.item_nav{
+    display: flex;
+    gap: 20px;
+}
+.item_nav li{
+    width: 14vw;
+    margin-bottom: 6vh;
+}
+
+ul.vent_rec li a{
+    color: blanchedalmond;
+    text-decoration: none;
+}
+
+ul.vent_rec li{
+    color: blanchedalmond;
+    text-align: left;
+    list-style: none;
+    margin-bottom: 6px;
+   
+}
+
+.list_lib1{  
+  background: url("../imagenes-buhonero/libro.png") no-repeat left center;
+  background-size: 12px 12px;
+  padding-left: 24px;
+  margin-bottom: 2px; 
+}
+.list_lib11{    
+  background: url("../imagenes-buhonero/autor.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib2{    
+  background: url("../imagenes-buhonero/editorial.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib3{    
+  background: url("../imagenes-buhonero/edicion.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib4{    
+  background: url("../imagenes-buhonero/cant-hojas.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib5{    
+  background: url("../imagenes-buhonero/medidas.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib6{  
+  background: url("../imagenes-buhonero/icono_buscar.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib7{
+  background: url("../imagenes-buhonero/pesos.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+.list_lib8{  
+  background: url("../imagenes-buhonero/flecha.png") no-repeat left center;
+  background-size: 16px 16px;
+  padding-left: 24px; 
+}
+/* medidas para tablet */
+
+/* página principal */
+@media (min-width: 800px){
+    nav ul li a{   
+    font-size: 1.8rem;
+    padding: 6px 20px;
+}
+    .desplegable{
+    gap: 120px;
+}
+    h1.titulo{
+    font-weight: 600;
+    font-size: 3rem;
+    text-shadow: 6px 6px 1px rgb(172, 163, 80);
+ 
+}
+
+.parrafo{
+    font-size: 3rem;     
+}
+
+.s1{
+    font-size: 30px;
+    }
+
+.s2{
+    font-size: 30px;      
+   }
+.main_princ{
+    height:64vh;
+}
+.fondo_index{
+   height:82vh;
+}
+/* catalogo */
+.btn{
+    padding: 20px;
+    font-size: 28px;
+}
+.cat_h1{
+    font-size: 28px;
+    font-weight: 600;
+   }
+
+.cat_h2{
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 28px;
+    font-weight: 900;
+  
+}
+.main_cat{
+    height: 66vh;}
+
+
+/* recibidas recientemente */
+
+main.main_rec section{
+    height:30vh;
+    font-size: 1.4rem;
+    gap: 30px;
+    padding: 30px;
+    margin: 30px;     
+}
+}
+
+/* desktop */
+
+@media (min-width: 1280px){
+    
+/* página principal */
+
+.bane{
+    gap: 500px;
+}
+    h1.titulo{
+    font-weight: 600;
+    font-size: 3rem;
+    text-shadow: 6px 6px 1px rgb(172, 163, 80);
+ 
+}
+
+/* catalogo */
+.header_cat nav ul{
+    gap: 30px;
+}
+.header_cat nav ul li a{
+    margin-bottom: 20%;
+
+}
+
+/* recibidas recientemente */
+
+main.main_rec section{
+    height:45vh;
+    font-size: 1.5rem;    
+}
+.item_nav{
+
+    gap: 50px;
+}
+.header_rec{
+    gap: 600px;
+   
+}
+}
+
+ 
