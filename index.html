@@ -11,27 +11,27 @@
 </head>
 <body class="b_index">
     <!-- este sera el banner de nuestra pagina -->
-   <figure>
-        <img class="img_ban" src="imagenes-buhonero/banner1.jpg" alt="Libros con flores">
-        <img class="img_ban ban_desk" src="imagenes-buhonero/banner2.jpg" alt="Libros con una figura">
-        <img class="img_ban" src="imagenes-buhonero/banner3.jpg" alt="Libro abierto">
-        <img class="img_ban" src="imagenes-buhonero/banner4.jpg" alt="biblioteca">
-        <img class="img_ban" src="imagenes-buhonero/banner5.jpg" alt="Libros">
+   <figure class="banner">
+        <img src="imagenes-buhonero/banner1.jpg" alt="Libros con flores">
+        <img class="ban_desk" src="imagenes-buhonero/banner2.jpg" alt="Libros con una figura">
+        <img src="imagenes-buhonero/banner3.jpg" alt="Libro abierto">
+        <img src="imagenes-buhonero/banner4.jpg" alt="biblioteca">
+        <img src="imagenes-buhonero/banner5.jpg" alt="Libros">
    </figure>
           
     <!-- header de pagina principal -->               
-    <header>
-        <div class="bane">
+    <header class="header_index">
+        <div class="logo">
             <!-- logo de la pagina -->
-            <img class="logo" src="./imagenes-buhonero/logo-dorado.PNG" alt="Logo de la página">
+            <img src="./imagenes-buhonero/logo-dorado.PNG" alt="Logo de la página">
 
             <!-- barra de navegación -->
 
             <nav>
-               <ul class="desplegable">
-                   <li>
+               <ul>
+                   <li class="desp">
 
-                      <a  class="catalogo" href="#">Cátalogo▾</a>
+                      <a href="#">Cátalogo▾</a>
                        
                       <ul class="cata1">
                            <li><a href="./paginas/catalogo.html">Por género</a></li>
@@ -49,7 +49,7 @@
     </header>
       
    <div class="fondo_index"> 
-        <main class="main_princ"> 
+        <main> 
 
            <h1 class="titulo">El Buhonero</h1>
            <h2 class="parrafo">Libros usados</h2>
@@ -57,11 +57,21 @@
            <p class="s2">Gran variedad de géneros literarios en excelente estado.</p>
     
         </main>
-       <footer >
+        <footer class="foo_cat">
 
-            <img class="foo_img" src="./imagenes-buhonero/facebook.png" alt="logo de facebook">
-            <img class="foo_img" src="./imagenes-buhonero/instagram.png" alt="logo de instagran">
-       </footer>
+            <div>
+                <h3> Contactanos</h3>
+                <h4><img class="img_h4" src="./imagenes-buhonero/phone.png" alt="">Tel: 1234-5678</h4>
+               
+                <h5> Puedes seguirnos en nuestras redes</h5>
+            </div>
+
+            <figure>
+              <img class="foo_img" src="./imagenes-buhonero/facebook.png" alt="logo de facebook">
+              <img class="foo_img" src="./imagenes-buhonero/instagram.png" alt="logo de instagran">
+            </figure>           
+
+        </footer>
             
  
     </body>

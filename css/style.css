@@ -1,0 +1,415 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+html {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  margin-top: 50px;
+}
+
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  height: 4vh;
+  width: auto;
+  align-content: center;
+  text-align: center;
+  padding: 2px 8px;
+  border-style: outset;
+  background-color: wheat;
+  border-radius: 20px;
+  border-color: rgba(73, 112, 74, 0.966);
+  box-shadow: 10px 4px 8px rgb(39, 39, 33);
+  color: rgb(7, 46, 30);
+}
+
+li.desp {
+  position: relative;
+}
+li.desp:hover > .desp > ul.cata1 {
+  opacity: 2;
+  visibility: visible;
+  transform: translateY(0);
+}
+li.desp .desp ul.cata1 {
+  flex-direction: column;
+  position: absolute;
+  z-index: 60;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+li.desp .desp ul.cata1 a {
+  display: inline-block;
+  padding: 4px 50px;
+  text-align: center;
+  border-color: blanchedalmond;
+  background-color: rgb(7, 46, 30);
+  color: wheat;
+}
+
+ul.cata1 {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  position: absolute;
+  z-index: 60;
+}
+
+li.desp:hover ul.cata1 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/*esta será nuestra página principal*/
+/*estas imagenes conformaran el background de nuestra barra de navegacion*/
+figure.banner {
+  display: flex;
+  width: 100%;
+  height: 20vh;
+}
+figure.banner img {
+  width: 25%;
+  height: 20vh;
+  object-fit: cover;
+}
+figure.banner img img.ban_desk {
+  display: none;
+}
+
+header.header_index {
+  /*nuestro header estara conformado por el logo y la barra de nacegacion*/
+  width: 100%;
+  height: 20vh;
+  position: absolute;
+  top: 0;
+}
+header.header_index div.logo {
+  width: 90%;
+  height: 18vh;
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  position: absolute;
+  top: 0;
+  gap: 60px;
+}
+header.header_index div.logo img {
+  border-style: outset;
+  background-color: rgba(230, 221, 221, 0.557);
+  border-radius: 25px 50px;
+  border-color: blanchedalmond;
+  box-shadow: 10px 4px 8px rgb(77, 77, 72);
+  color: blanchedalmond;
+  height: 16vh;
+  margin: 8px 0 0 4%;
+}
+header.header_index div.logo nav {
+  width: 60vw;
+  z-index: 80;
+}
+header.header_index div.logo nav ul {
+  gap: 40px;
+}
+header.header_index div.logo nav ul li.desp a:hover {
+  border-style: inset;
+  background-color: rgb(7, 46, 30);
+  border-radius: 50px;
+  border-color: rgb(247, 247, 236);
+  box-shadow: 2px 4px 2px rgb(201, 199, 186);
+  color: rgb(247, 247, 236);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+header.header_index div.logo nav ul li.desp ul.cata1 {
+  width: 30vw;
+  flex-wrap: wrap;
+  top: 5px;
+}
+header.header_index div.logo nav ul li.desp ul.cata1 li a {
+  width: 30vw;
+  /* al hacer hover aparecera el menu vertical*/
+}
+header.header_index div.logo nav ul li.desp ul.cata1 li a:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  border-style: inset;
+  background-color: rgb(7, 46, 30);
+  border-radius: 50px;
+  border-color: rgb(247, 247, 236);
+  box-shadow: 10px 4px 8px rgb(39, 39, 33);
+  color: rgb(247, 247, 236);
+}
+header.header_index div.logo nav ul li.mensaje a:hover {
+  border-style: inset;
+  background-color: rgb(7, 46, 30);
+  border-radius: 50px;
+  border-color: rgb(247, 247, 236);
+  box-shadow: 2px 4px 2px rgb(201, 199, 186);
+  color: rgb(247, 247, 236);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* nuestro main tendra display grid*/
+div.fondo_index {
+  background-image: url(/imagenes-buhonero/libro-blanco.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  /* en el footer se encontrara nuestra informacion de contacto y redes*/
+}
+div.fondo_index main {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 2fr 0.5fr repeat(5, 1fr) 0.5fr;
+  width: 100%;
+  height: 70vh;
+  padding: 6px;
+  margin-top: 2px;
+  color: rgb(247, 247, 236);
+  gap: 5px;
+  grid-template-areas: ". . titulo titulo titulo titulo . ." ". . . . parrafo parrafo parrafo . " ". . . . . . . . " ". s1 s1 s1 s1 s1 . ." ". . . . . . . . " ". . . s2 s2 s2 s2 ." ". . . . . . . . ";
+}
+div.fondo_index main h1.titulo {
+  margin-top: 10px;
+  grid-area: titulo;
+  color: #940533;
+  justify-content: center;
+  font-weight: 500;
+  text-shadow: 4px 4px 1px rgb(172, 163, 80);
+}
+div.fondo_index main .parrafo {
+  grid-area: parrafo;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 30px;
+  color: rgb(7, 46, 30);
+  text-align: left;
+  text-shadow: 4px 4px 1px rgba(34, 61, 69, 0.5);
+}
+div.fondo_index main .s1 {
+  grid-area: s1;
+  border-radius: 10px;
+  padding: 6px;
+  align-content: center;
+  font-family: "Special Elite", system-ui;
+  border-style: outset;
+  background-color: rgba(10, 11, 55, 0.811);
+  border-radius: 25px;
+  border-color: blanchedalmond;
+  box-shadow: 6px 8px 6px rgba(8, 32, 9, 0.95);
+  color: rgb(247, 247, 236);
+}
+div.fondo_index main .s2 {
+  grid-area: s2;
+  font-style: italic;
+  font-weight: 600;
+  align-content: center;
+  border-style: outset;
+  background-color: rgba(251, 233, 231, 0.8);
+  border-radius: 25px;
+  border-color: blanchedalmond;
+  box-shadow: 6px 8px 6px rgba(8, 32, 9, 0.95);
+  color: rgb(7, 46, 30);
+  padding: 4px;
+}
+div.fondo_index footer {
+  color: blanchedalmond;
+  background: radial-gradient(circle at center, rgb(41, 18, 5), transparent);
+  text-shadow: none;
+  width: 100%;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: none;
+  border-top: 2px solid rgb(63, 47, 47);
+  bottom: 0;
+}
+div.fondo_index footer div {
+  color: 2px 2px 1px rgb(251, 233, 231);
+  background: none;
+  text-shadow: 3px 3px 1px rgb(53, 51, 32);
+}
+div.fondo_index footer div h3 {
+  top: 0%;
+  margin-bottom: 4px;
+  color: rgb(255, 193, 7);
+}
+div.fondo_index footer div h4 {
+  align-items: center;
+  gap: 8px;
+}
+div.fondo_index footer div h5 {
+  padding: 8px;
+}
+div.fondo_index footer figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 60px;
+}
+div.fondo_index footer figure img.foo_img {
+  border-style: outset;
+  background-color: rgba(255, 255, 255, 0.756);
+  border-radius: 8px 20px;
+  border-color: blanchedalmond;
+  box-shadow: 10px 4px 8px rgb(77, 77, 72);
+  color: rgb(255, 193, 7);
+  height: 8vh;
+  padding: 2px;
+  margin-top: 10px;
+}
+
+/*esta sera la pagina de catalogo por genero*/
+header.h_cat {
+  background-image: url(/imagenes-buhonero/oscuro_sombra.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5px;
+}
+header.h_cat div button.btn {
+  margin-left: 5px;
+  background-color: wheat;
+  color: rgb(63, 5, 20);
+}
+header.h_cat nav {
+  margin-right: 10px;
+}
+header.h_cat nav ul {
+  display: flex;
+  gap: 10px;
+}
+header.h_cat nav ul li a {
+  width: 16vw;
+  margin-bottom: 40%;
+  text-align: center;
+}
+
+div.div_cat {
+  background-image: url(/imagenes-buhonero/1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+div.div_cat main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr 2fr 1fr 2fr;
+  height: 69vh;
+  grid-template-areas: ". . . ." "x x x ." ". . . ." ". xx xx xx";
+}
+div.div_cat main .cat_h1 {
+  grid-area: x;
+  margin-left: 20px;
+  font-weight: 600;
+  align-content: center;
+  font-family: "Special Elite", system-ui;
+  font-size: 20px;
+  color: rgb(63, 5, 20);
+  text-align: center;
+  text-shadow: 2px 2px 1px rgb(251, 233, 231);
+  border-style: outset;
+  background-color: rgba(251, 233, 231, 0.8);
+  border-radius: 25px;
+  border-color: blanchedalmond;
+  box-shadow: 2px 2px 4px rgba(172, 163, 80, 0.632);
+  color: rgb(7, 46, 30);
+}
+div.div_cat main .cat_h2 {
+  grid-area: xx;
+  margin-left: 12px;
+  align-content: center;
+  font-weight: 600;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 20px;
+  color: rgb(25, 38, 99);
+  text-align: center;
+  text-shadow: 2px 2px 1px rgb(232, 245, 233);
+  border-style: outset;
+  background-color: rgba(251, 233, 231, 0.8);
+  border-radius: 25px;
+  border-color: blanchedalmond;
+  box-shadow: 2px 2px 4px rgba(172, 163, 80, 0.632);
+  color: rgb(7, 46, 30);
+}
+div.div_cat footer.foo_cat {
+  color: blanchedalmond;
+  background: radial-gradient(circle at center, rgb(41, 18, 5), transparent);
+  text-shadow: none;
+  width: 100%;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: none;
+  border-top: 2px solid rgb(63, 47, 47);
+  bottom: 0;
+}
+div.div_cat footer.foo_cat div {
+  color: 2px 2px 1px rgb(251, 233, 231);
+  background: none;
+  text-shadow: 3px 3px 1px rgb(53, 51, 32);
+  justify-content: center;
+}
+div.div_cat footer.foo_cat div h3 {
+  top: 0%;
+  margin-bottom: 4px;
+  color: rgb(255, 193, 7);
+}
+div.div_cat footer.foo_cat div h4 {
+  align-items: center;
+  gap: 8px;
+}
+div.div_cat footer.foo_cat div h5 {
+  padding: 8px;
+}
+div.div_cat footer.foo_cat figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 60px;
+}
+div.div_cat footer.foo_cat figure img.foo_img {
+  border-style: outset;
+  background-color: rgba(255, 255, 255, 0.756);
+  border-radius: 8px 20px;
+  border-color: blanchedalmond;
+  box-shadow: 10px 4px 8px rgb(77, 77, 72);
+  color: rgb(255, 193, 7);
+  height: 8vh;
+  padding: 2px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */

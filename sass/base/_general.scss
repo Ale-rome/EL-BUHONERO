@@ -1,13 +1,16 @@
 //variables
-@use "../abstracts/variables";
+@use '../abstracts/variables';
 //mixin
-@use "../abstracts/mixin";
+@use '../abstracts/mixin';
 
 
 html{
     font-family: variables.$font-primario; 
 }
 
+nav ul{
+    display: flex;
+}
 nav ul li{
     list-style: none;
     margin-top: 50px;
@@ -15,7 +18,10 @@ nav ul li{
 nav ul li a{
     display: inline-block;
     text-decoration: none;
-    color: rgb(14, 64, 44);
-    padding: 3px;
-    @include mixin.box-estilo(outset, beige, 20px, variables.$sombra-a);
-}
+    height: 4vh;
+    width: auto;
+    align-content: center;
+    text-align: center;
+    padding: 2px 8px;
+    @include mixin.box-estilo(outset, variables.$beig-a, 20px, rgba(73, 112, 74, 0.966), variables.$sombra-a, variables.$tex);
+}   

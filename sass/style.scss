@@ -1,14 +1,14 @@
 //reset
 
-@use "base/reset";
+@use 'base/reset';
 
 //general
 
 //general
-@use "./base/general";
+@use './base/general';
 
 //hover
-@use "./base/hover";
+@use './base/hover';
 //home
-@use "./pages/home";
+@use './pages/home';
 

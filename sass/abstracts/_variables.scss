@@ -6,24 +6,26 @@ $font-terciario: "Amatic SC", sans-serif;
 
 //paleta de colores
 
-$color-reciente:blanchedalmond; 
-$color-hover: #769585;
-$color-a: wheat;
-$color-borde: antiquewhite;
-$color-item: darkgreen;
-$color-card: rgb(0, 77, 64);
+$titulo: #940533;
+$oro:blanchedalmond; 
+$hover:  rgb(88, 170, 125);
+$beig-a: wheat;
+$box: rgb(251, 233, 231, 0.8);
+$card: rgb(63, 5, 20);
+$tex: rgb(7, 46, 30);
+$claro:rgba(230, 221, 221, 0.557);
+$claro2: rgb(247, 247, 236);
+$enfasis: rgb(255, 193, 7);
+$azul: rgba(10, 11, 55, 0.811);
 
 //sombra
 $sombra-a: 10px 4px 8px rgb(39, 39, 33);
 $sombra-logo: 10px 4px 8px rgb(77, 77, 72);
-$sombra-titulo-cat: 2px 2px 1px rgb(251, 233, 231, 1);
-$sombra-titulo-princ: 4px 4px 1px rgb(172, 163, 80);
-$sombra-sub-cat: 2px 2px 1px rgb(232, 245, 233);
-$sombra-parrafo: 6px 6px 2px rgb(34, 61, 69, 0.5);
+$hover: 2px 2px 1px rgb(251, 233, 231, 1);
+$sombra-oro: 2px 2px 4px rgba(172, 163, 80, 0.632);
+$sombra-clar1: 2px 2px 1px rgb(232, 245, 233);
+$sombra-parrafo: 4px 4px 1px rgb(34, 61, 69, 0.5);
+$sombra-s: 6px 8px 6px rgba(8, 32, 9, 0.95);
 
 
-//sombra radial
 
-$back-radial-cat1: radial-gradient(circle at center, rgba(255, 235, 238, 2), transparent);
-$back-radial-s2: radial-gradient(circle at center, rgba(255, 235, 238, 0.8), transparent);
-$back-radial-s1: radial-gradient(circle at center, rgba(255, 235, 205, 1), transparent);

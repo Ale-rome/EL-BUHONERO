@@ -1,5 +1,58 @@
 //mixin
-@use "../abstracts/mixin";
+@use '../abstracts/mixin';
 //variables
-@use "../abstracts/variables";
+@use '../abstracts/variables';
+
+
+li.desp {
+  position: relative;
+
+  &:hover > .desp > ul.cata1 {
+    
+    @include mixin.hover(2, visible, 0);
+  }
+
+  .desp {
+    a {
+      
+    }
+
+    ul.cata1 {
+      flex-direction: column;
+      position: absolute;
+      z-index: 60;
+      @include mixin.hover(0, hidden, 10px);
+      transition: 0.3s ease;
+
+      a {
+        @include mixin.estilo-a(
+          4px 50px,
+          center,
+          variables.$oro,
+          variables.$tex,
+          variables.$beig-a
+        );
+        
+      }
+    }
+  }
+}
+
+
+
+ul.cata1 {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  position: absolute;
+  z-index: 60;
+}
+
+li.desp:hover ul.cata1 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 

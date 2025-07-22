@@ -1,104 +1,351 @@
 //variables
-@use "../abstracts/variables";
+@use '../abstracts/variables';
 //mixin
-@use "../abstracts/mixin";
+@use '../abstracts/mixin';
 //hover
 
+/*esta será nuestra página principal*/
 
+/*estas imagenes conformaran el background de nuestra barra de navegacion*/
 
-body.b_index{
-    figure{
-       display: flex;
-       position: relative;
-      
-       @include mixin.medida( 100%, 20vh, none);
-        .img_ban{
-            object-fit: cover;
+figure.banner{
+
+    @include mixin.flex(100%, 20vh);
+
+    img{
+       
+        width: 25%;
+        height: 20vh;
+        object-fit: cover;
+
+        img.ban_desk{
             
-            width: 25%;
-            .ban_desk{
             display: none;
-        }
-        }
-        
-    }
-    header{
-        @include mixin.medida(100%, 20vh, none);
-        top:0;
-        justify-content: space-between;
-        position: absolute;
 
-        div.bane{
-            @include mixin.flex(90%, 18vh, none, none, 10vw);
-           
-
-            img.logo{
-                @include mixin.box-estilo(outset, rgba(230, 221, 221, 0.557), 20px, variables.$sombra-logo);
-                @include mixin.medida(none, 16vh, 8px 0 0 4%)
-
-            }
-
-
-            nav{
-
-                display: flex;
-                width: 60vw;
-                z-index: 80;
-
-                ul.desplegable{
-
-                    display: flex;
-                    gap: 10px;
-                        
-                       li.catalogo{
-                        position: relative;
-
-                           ul.cata1{
-
-                            display: none;
-                            position: absolute;
-                            top: 100%;
-                            background-color: #769585;
-                            border-radius: 50px;
-                            @include mixin.hover(0, hidden, 10px);
-                            transition: 0.3s ease;
-
-                           }
-                            &:hover ul.cata1 {
-                           display: block;
-                            @include mixin.hover(2, visible, 0px);
-                            }
-                        }
-
-          
-                   
-                }
-                   
-
-            }
-        }
-
-    }
-    div.fondo_index{
-        main.main_princ{
-            h1.titulo{
-
-            }
-            h2.parrafo{
-
-            }
-            p.s1{
-
-            }
-            p.s2{
-
-            }
-        }
-        footer{
-            img.foo_img{
-                
-            }
         }
     }
 }
 
+header.header_index{
+   /*nuestro header estara conformado por el logo y la barra de nacegacion*/
+    @include mixin.medida(100%, 20vh);
+    position: absolute;
+    top:0;
+
+    div.logo{
+
+        @include mixin.medida(90%, 18vh);
+        @include mixin.flex(100%, 20vh);
+        position: absolute;
+        top: 0;
+        gap: 60px;
+
+        img{
+           @include mixin.box-estilo(outset, variables.$claro, 25px 50px, variables.$oro, variables.$sombra-logo, variables.$oro);
+           height: 16vh;
+           margin: 8px 0 0 4%;
+
+        }
+
+        nav{
+            width: 60vw;
+            z-index: 80;
+
+            ul{
+               
+               gap: 40px;
+                li.desp{
+                    a{
+                        &:hover {
+                       
+                        @include mixin.box-estilo(inset, variables.$tex, 50px, variables.$claro2, 2px 4px 2px rgb(201, 199, 186), variables.$claro2);
+                        @include mixin.hover(1, visible, 0);
+                       
+                        }
+
+                    }
+                    ul.cata1{
+                        width: 30vw;
+                        flex-wrap: wrap;
+                        top: 5px;
+                       
+                        li{
+                           
+                            a{ 
+                                width: 30vw;
+                               /* al hacer hover aparecera el menu vertical*/                      
+
+                                &:hover {                              
+                                @include mixin.hover(1, visible, 0);
+                                @include mixin.box-estilo(inset, variables.$tex, 50px, variables.$claro2, variables.$sombra-a, variables.$claro2);
+                               
+                                
+                                }
+                      
+
+                            }
+                        }
+                    }
+                }
+
+                li.mensaje{
+                    a{
+                        &:hover {
+                                     
+                            @include mixin.box-estilo(inset, variables.$tex, 50px, variables.$claro2, 2px 4px 2px rgb(201, 199, 186), variables.$claro2);     
+                            @include mixin.hover(1, visible, 0);
+                                                 
+                                         
+                        }         
+
+                    }
+                }
+
+            }
+
+
+        }
+
+
+    }
+
+}
+/* nuestro main tendra display grid*/
+
+div.fondo_index{
+
+   background-image: url(/imagenes-buhonero/libro-blanco.png);
+    @include mixin.background-fondo(cover, center);
+    @include mixin.medida(100%, 100%);
+    text-align: center;
+    align-content: center;
+
+    main{
+        @include mixin.grid(repeat(8, 1fr), 2fr 0.5fr repeat(5, 1fr) 0.5fr);
+        @include mixin.medida(100%, 70vh);
+        padding: 6px;
+        margin-top: 2px;
+        color: variables.$claro2;
+        gap: 5px; 
+        grid-template-areas: 
+        ". . titulo titulo titulo titulo . ."
+        ". . . . parrafo parrafo parrafo . "
+        ". . . . . . . . "
+        ". s1 s1 s1 s1 s1 . ."  
+        ". . . . . . . . "
+        ". . . s2 s2 s2 s2 ."
+        ". . . . . . . . ";
+
+        h1.titulo{
+        margin-top: 10px;
+        grid-area: titulo;
+        color: variables.$titulo;
+        justify-content: center;
+        font-weight: 500;
+        text-shadow: 4px 4px 1px rgb(172, 163, 80);
+ 
+        }
+
+       .parrafo{
+        grid-area: parrafo;
+        @include mixin.estilo_texto(variables.$font-terciario, 30px, variables.$tex, left, variables.$sombra-parrafo);        
+    
+       }
+
+       .s1{
+       grid-area: s1;
+       border-radius: 10px;
+       padding: 6px;
+       align-content: center;
+       font-family: variables.$font-secundario;
+       @include mixin.box-estilo(outset, variables.$azul,25px, variables.$oro, variables.$sombra-s, variables.$claro2);
+      }
+
+     .s2{
+     grid-area: s2;    
+     font-style: italic;
+     font-weight: 600;
+     align-content: center;
+     @include mixin.box-estilo(outset, variables.$box, 25px, variables.$oro, variables.$sombra-s, variables.$tex);
+     padding: 4px;
+     }
+
+      
+    
+    }
+        
+        
+        
+
+   /* en el footer se encontrara nuestra informacion de contacto y redes*/ 
+
+    footer{
+        @include mixin.radial(variables.$oro, radial-gradient(circle at center, rgb(41, 18, 5), transparent), none);
+        @include mixin.medida(100%, 30vh);
+        @include mixin.position(center, center, center, none);
+        border-top: 2px solid rgb(63, 47, 47);
+        bottom: 0;
+        
+
+        div{
+            @include mixin.radial(variables.$hover, none,  3px 3px 1px rgb(53, 51, 32));
+
+           
+            h3{
+                top:0%;
+                margin-bottom: 4px;
+                color: variables.$enfasis;
+                           
+            }
+            h4{
+              
+                align-items: center;
+                gap: 8px;
+               
+            }
+            h5{
+                padding: 8px;
+            }
+            
+
+        }
+
+        figure{
+            display: flex;
+            @include mixin.position(center, center, center, 60px);
+
+            img.foo_img{
+            @include mixin.box-estilo(outset, rgba(255, 255, 255, 0.756), 8px 20px, variables.$oro, variables.$sombra-logo, variables.$enfasis);
+            height: 8vh;
+            padding:2px;
+            margin-top: 10px;
+            }
+
+        }  
+        
+    }
+}
+
+
+/*esta sera la pagina de catalogo por genero*/
+
+header.h_cat{
+    background-image: url(/imagenes-buhonero/oscuro_sombra.jpg);
+    @include mixin.background-fondo(cover, center);
+    @include mixin.flex(100vw, 20vh);
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5px;
+
+    div{
+        button.btn{
+            margin-left: 5px;
+            background-color: variables.$beig-a;
+            color: variables.$card;
+
+        }
+    }
+
+    nav{
+        margin-right: 10px;
+        ul{
+            @include mixin.flex-gap(10px);
+            li{
+                a{
+                    width: 16vw;
+                    margin-bottom: 40%;
+                    text-align: center;
+                }
+            }
+           
+        }
+    }
+    
+}
+
+div.div_cat{
+    background-image: url(/imagenes-buhonero/1.jpg);
+    @include mixin.background-fondo(cover, center);
+    width: 100%;
+    
+
+    main{
+        @include mixin.grid(repeat(4, 1fr), 0.2fr 2fr 1fr 2fr);
+        height: 69vh;
+        grid-template-areas: 
+        ". . . ."
+        "x x x ."
+        ". . . ."
+       ". xx xx xx";
+
+        .cat_h1{        
+        grid-area: x;
+        margin-left: 20px;        
+        font-weight: 600;
+        align-content: center;       
+        @include mixin.estilo_texto(variables.$font-secundario, 20px, variables.$card, center, variables.$hover);
+        @include mixin.box-estilo(outset, variables.$box, 25px, variables.$oro, variables.$sombra-oro, variables.$tex);
+ 
+        }
+
+        .cat_h2{    
+        grid-area: xx;    
+        margin-left: 12px;    
+        align-content: center;   
+        font-weight: 600;   
+        @include mixin.estilo_texto(variables.$font-primario, 20px, rgb(25, 38, 99), center, variables.$sombra-clar1);
+        @include mixin.box-estilo(outset, variables.$box, 25px, variables.$oro, variables.$sombra-oro, variables.$tex);
+       }
+   
+    }
+
+   footer.foo_cat{
+
+        @include mixin.radial(variables.$oro, radial-gradient(circle at center, rgb(41, 18, 5), transparent), none);
+        @include mixin.medida(100%, 30vh);
+        @include mixin.position(center, center, center, none);
+        border-top: 2px solid rgb(63, 47, 47);
+        bottom: 0;
+        
+
+        div{
+            @include mixin.radial(variables.$hover, none,  3px 3px 1px rgb(53, 51, 32));
+            justify-content: center;
+           
+            h3{
+                top:0%;
+                margin-bottom: 4px;
+                color: variables.$enfasis;
+                           
+            }
+            h4{
+              
+                align-items: center;
+                gap: 8px;
+               
+            }
+            h5{
+                padding: 8px;
+            }
+            
+
+        }
+
+        figure{
+            display: flex;
+            @include mixin.position(center, center, center, 60px);
+
+            img.foo_img{
+            @include mixin.box-estilo(outset, rgba(255, 255, 255, 0.756), 8px 20px, variables.$oro, variables.$sombra-logo, variables.$enfasis);
+            height: 8vh;
+            padding:2px;
+            margin-top: 10px;
+            }
+
+        }  
+        
+    }
+
+  
+   
+}

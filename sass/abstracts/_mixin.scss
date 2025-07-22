@@ -1,75 +1,84 @@
 //mixin con parametros
-@mixin grid($grid, $column, $row) {
-    display: $grid;
+@mixin grid($column, $row) {
+    display: grid;
     grid-template-columns: $column;
     grid-template-rows: $row;
 }
-@mixin box-estilo($estilo, $backcol, $radius, $shadow) {
-   border-style: $estilo;
-   background-color: $backcol;
-   border-radius: $radius;    
-   box-shadow: $shadow;
-}
-//mixin sin parametros
-@mixin viñetas {
-    background-size: 16px 16px;
-    padding-left: 24px;
-    margin-bottom: 2px; 
-}
 
-@mixin estilo_texto($fuente, $px, $color, $text, $bk, $sombra) {
+@mixin box-estilo($border-estilo, $backcol, $radius, $border-color, $shadow, $color) {
+  border-style: $border-estilo;
+   background-color: $backcol;
+   border-radius: $radius;  
+   border-color: $border-color;  
+   box-shadow: $shadow;
+   color: $color;
+} 
+
+@mixin estilo_texto($fuente, $px, $color, $textalign, $sombra) {
     font-family: $fuente;
     font-size: $px;
     color: $color;
-    text-align: $text;
-    background: $bk;
+    text-align: $textalign;
     text-shadow: $sombra;
 }
-   
-
-//mixin con parametros y estilos fijos
-@mixin background-fondo($imagen, $size, $position, $shadow) {
-    background-image: url($imagen);
-    background-size: $size;
-    background-position: $position;
-    background-repeat: no-repeat;
-    box-shadow: $shadow;
+@mixin radial($color, $radial, $shadow){
+    color: $color;
+    background: $radial;
+    text-shadow: $shadow;
 }
 
-@mixin medida($ancho, $alto, $top) { 
+@mixin medida($ancho, $alto){ 
   width: $ancho;
   height: $alto;
-  margin: $top;
+ 
+}
+@mixin position($cont, $aligit, $acont, $gap){
+    justify-content: $cont;
+    align-items: $aligit;
+    align-content: $acont;
+    gap: $gap;
 }
 
-@mixin flex($alt, $baj, $ubicacion, $item, $gap) {
-    display: flex;
-    width: $alt;
-    height: $baj;        
-    justify-content: $ubicacion;
-    align-items: $item;
-    gap: $gap;   
-}
-@mixin position($cont, $it, $acont, $pos, $z){
-    justify-content: $cont;
-    align-items: $it;
-    align-content: $acont;
+@mixin z-index($pos, $z){   
     position: $pos;
     z-index: $z;
 }
-@mixin hover($opa, $vis, $tray){
-   opacity: $opa;
-   visibility: $vis;
-   transform: translateY($tray);
+@mixin hover($opacity, $visibility, $translateY){
+   opacity: $opacity;
+   visibility: $visibility;
+   transform: translateY($translateY);
 }
-@mixin estilo-ul($med) {
+
+//mixin sin parametros
+
+@mixin viñetas {
+    background-size: 16px 16px;
+    padding-left: 2px;
+    margin-bottom: 2px; 
+}
+
+//mixin con parametros y estilos fijos
+
+@mixin background-fondo($size, $position) {
+    background-size: $size;
+    background-position: $position;
+    background-repeat: no-repeat;
+    
+}
+
+@mixin flex($wi, $hei) {
+    display: flex;
+    width: $wi;
+    height: $hei;        
+   
+}
+
+@mixin flex-gap($med) {
     display: flex;
     gap: $med;
 }
 
-@mixin estilo-li{
 
-}
 
 @mixin estilo-a($padd, $alig, $border, $back, $col) {
     display: inline-block;
@@ -79,4 +88,3 @@
     background-color: $back;
     color: $col;
 }
-
